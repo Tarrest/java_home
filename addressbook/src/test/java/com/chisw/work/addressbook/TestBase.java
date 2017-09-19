@@ -1,26 +1,21 @@
 package com.chisw.work.addressbook;
 
-import appmanager.ApplicationManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
+public class TestBase {
 
-public class TestBase extends ApplicationManager{
 
-    protected ApplicationManager app = new ApplicationManager();
+    protected final ApplicationManager app = new ApplicationManager();
 
-    @BeforeTest
-    public void startDriver() {
-        app.init();
+    @BeforeMethod
+    public void setUp() throws Exception {
+        app.open();
     }
 
-    @AfterTest
-    public void tearDownDriver() {
-        app.stop();
+    @AfterMethod
+    public void tearDown() {
+        app.close();
     }
 
 }
