@@ -1,4 +1,4 @@
-package com.chisw.work.addressbook;
+package com.chisw.work.addressbook.Data;
 
 public class ContactData {
     private final String fName;
