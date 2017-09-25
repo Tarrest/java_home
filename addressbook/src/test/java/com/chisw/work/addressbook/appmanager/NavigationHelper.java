@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 
 public class NavigationHelper extends BaseHelper {
 
-    WebDriver driver;
-
     public NavigationHelper(WebDriver driver) {
         super(driver);
     }

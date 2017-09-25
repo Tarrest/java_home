@@ -1,8 +1,9 @@
 package com.chisw.work.addressbook.appmanager;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,13 +14,23 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private ContactHelper contactHelper;
     private GroupsHelper groupsHelper;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
+
 
     public void init() {
-        DesiredCapabilities capabilitiesFirefox = new DesiredCapabilities();
-        capabilitiesFirefox.setCapability("marionette", true);
-        System.setProperty("webdriver.gecko.driver", "c:\\Geckodriver\\geckodriver.exe");
-        driver = new FirefoxDriver(capabilitiesFirefox);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+        if (browser.equals(BrowserType.FIREFOX)) {
+            System.setProperty("webdriver.gecko.driver", "c:\\Tools\\geckodriver.exe"); //папку с драйверами добавил в path
+            driver = new FirefoxDriver();
+        } else if (browser.equals(BrowserType.CHROME)) {
+            System.setProperty("webdriver.chrome.driver", "c:\\Tools\\chromedriver.exe");
+            driver = new ChromeDriver();
+        }
+        //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get("http://localhost/addressbook/");
         contactHelper = new ContactHelper(driver);
         navigationHelper = new NavigationHelper(driver);

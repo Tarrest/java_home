@@ -2,11 +2,12 @@ package com.chisw.work.addressbook.appmanager;
 
 import com.chisw.work.addressbook.Data.ContactData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class ContactHelper extends BaseHelper {
-
-    WebDriver driver;
 
     public ContactHelper(WebDriver driver) {
         super(driver);
@@ -17,10 +18,10 @@ public class ContactHelper extends BaseHelper {
     }
 
     public void submitUpdateContactForm() {
-        click(By.xpath(".//*[@id='content']/form[1]/input[1]"));
+        click(By.name("update"));
     }
 
-    public void fillContactForm(ContactData contactData) {
+    public void fillContactForm(ContactData contactData, boolean creation) {
         type(By.name("firstname"), contactData.getfName());
         type(By.name("middlename"), contactData.getmName());
         type(By.name("lastname"), contactData.getlName());
@@ -29,6 +30,12 @@ public class ContactHelper extends BaseHelper {
         type(By.name("company"), contactData.getCompany());
         type(By.name("address"), contactData.getAddress());
         type(By.name("home"), contactData.getHomePhone());
+
+        if (creation) {
+            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroupName());
+        } else {
+            Assert.assertFalse(isElementPresent(By.name("new_group")));
+        }
     }
 
 

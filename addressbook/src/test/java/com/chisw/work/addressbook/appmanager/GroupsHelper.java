@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 
 public class GroupsHelper extends BaseHelper{
 
-
     public GroupsHelper(WebDriver driver) {
         super(driver);
     }
@@ -31,6 +30,14 @@ public class GroupsHelper extends BaseHelper{
 
     public void deleteGroup() {
         click(By.name("delete"));
+    }
+
+    public void editGroup() {
+        click(By.name("edit"));
+    }
+
+    public void updateGroup() {
+        click(By.name("update"));
     }
 
 
