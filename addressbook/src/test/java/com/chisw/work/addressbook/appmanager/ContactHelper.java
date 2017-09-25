@@ -13,6 +13,10 @@ public class ContactHelper extends BaseHelper {
         super(driver);
     }
 
+    public void createNewContact() {
+        click(By.linkText("ADD_NEW"));
+    }
+
     public void submitContactForm() {
         click(By.name("submit"));
     }
