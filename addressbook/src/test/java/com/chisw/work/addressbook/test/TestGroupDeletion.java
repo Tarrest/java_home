@@ -7,7 +7,7 @@ public class TestGroupDeletion extends TestBase {
     @Test
     public void checkGroupDeletion() {
         app.getNavigationHelper().goToGroupsPage();
-        if (! app.getGroupsHelper().isGroupsCreted()) {
+        if (! app.getGroupsHelper().isGroupsCreated()) {
             app.getGroupsHelper().createGroup();
             app.getNavigationHelper().goToGroupsPage();
         }

@@ -48,7 +48,7 @@ public class GroupsHelper extends BaseHelper{
 
     }
 
-    public boolean isGroupsCreted() {
+    public boolean isGroupsCreated() {
         return isElementPresent(By.name("selected[]"));
     }
 }

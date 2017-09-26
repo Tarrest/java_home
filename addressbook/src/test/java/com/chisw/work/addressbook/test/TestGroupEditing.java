@@ -3,12 +3,12 @@ package com.chisw.work.addressbook.test;
 import com.chisw.work.addressbook.Data.GroupData;
 import org.testng.annotations.Test;
 
-public class TestGroupModification extends TestBase {
+public class TestGroupEditing extends TestBase {
 
     @Test
-    public void checkGroupModification() {
+    public void checkGroupEditing() {
         app.getNavigationHelper().goToGroupsPage();
-        if (! app.getGroupsHelper().isGroupsCreted()) {
+        if (! app.getGroupsHelper().isGroupsCreated()) {
             app.getGroupsHelper().createGroup();
             app.getNavigationHelper().goToGroupsPage();
         }

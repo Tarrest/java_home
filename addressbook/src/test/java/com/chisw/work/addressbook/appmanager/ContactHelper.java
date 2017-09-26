@@ -1,6 +1,7 @@
 package com.chisw.work.addressbook.appmanager;
 
 import com.chisw.work.addressbook.Data.ContactData;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +37,7 @@ public class ContactHelper extends BaseHelper {
         type(By.name("home"), contactData.getHomePhone());
 
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroupName());
+            new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getGroupName());
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -46,4 +47,25 @@ public class ContactHelper extends BaseHelper {
     public void pressEditContact() {
         click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
+
+    public boolean isContactCreared() {
+        return isElementPresent(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
+    }
+
+    public void createContact() {
+        createNewContact();
+        fillContactForm(new ContactData("eqwrqwer", "fgdgfgfgf", "teat","bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
+        submitContactForm();
+    }
+
+    public void selectContact() {
+        click(By.name("selected[]"));
+    }
+
+    public void deleteContact() {
+        click(By.xpath(".//*[@id='content']/form[2]/div[2]/input"));
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
 }
