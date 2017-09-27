@@ -1,7 +1,10 @@
 package com.chisw.work.addressbook.test;
 
+import com.chisw.work.addressbook.Data.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class TestGroupDeletion extends TestBase {
 
@@ -12,12 +15,18 @@ public class TestGroupDeletion extends TestBase {
             app.getGroupsHelper().createGroup();
             app.getNavigationHelper().goToGroupsPage();
         }
-        int before = app.getGroupsHelper().getGroupsCount();
-        app.getGroupsHelper().selectCreatedGroup();
+        List<GroupData> before = app.getGroupsHelper().getGroupsList();
+        app.getGroupsHelper().selectCreatedGroup(before.size() - 1);
         app.getGroupsHelper().deleteGroup();
         app.getNavigationHelper().goToGroupsPage();
-        int after = app.getGroupsHelper().getGroupsCount();
-        Assert.assertEquals(after, before - 1);
+        List<GroupData> after = app.getGroupsHelper().getGroupsList();
+        Assert.assertEquals(after.size(), before.size() - 1);
+
+        before.remove(before.size() - 1);
+        Assert.assertEquals(before, after);
+/*        for (int i = 0; i < after.size(); i++) {
+            Assert.assertEquals(before.get(i), after.get(i));
+        }*/
     }
 
 }

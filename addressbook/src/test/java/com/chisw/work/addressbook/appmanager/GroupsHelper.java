@@ -3,6 +3,10 @@ package com.chisw.work.addressbook.appmanager;
 import com.chisw.work.addressbook.Data.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupsHelper extends BaseHelper{
 
@@ -24,8 +28,9 @@ public class GroupsHelper extends BaseHelper{
         click(By.name("submit"));
     }
 
-    public void selectCreatedGroup() {
-        click(By.name("selected[]"));
+    public void selectCreatedGroup(int index) {
+        List<WebElement> groupsList = driver.findElements(By.name("selected[]"));
+        groupsList.get(index).click();
     }
 
     public void deleteGroup() {
@@ -54,5 +59,16 @@ public class GroupsHelper extends BaseHelper{
 
     public int getGroupsCount() {
         return driver.findElements(By.name("selected[]")).size();
+    }
+
+    public List<GroupData> getGroupsList() {
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            GroupData group = new GroupData(name, null, null);
+            groups.add(group);
+        }
+        return groups;
     }
 }

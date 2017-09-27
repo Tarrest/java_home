@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class ContactHelper extends BaseHelper {
 
     public ContactHelper(WebDriver driver) {
