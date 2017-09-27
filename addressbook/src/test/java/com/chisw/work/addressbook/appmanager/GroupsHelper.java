@@ -51,4 +51,8 @@ public class GroupsHelper extends BaseHelper{
     public boolean isGroupsCreated() {
         return isElementPresent(By.name("selected[]"));
     }
+
+    public int getGroupsCount() {
+        return driver.findElements(By.name("selected[]")).size();
+    }
 }

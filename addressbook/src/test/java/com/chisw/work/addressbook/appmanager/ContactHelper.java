@@ -37,7 +37,7 @@ public class ContactHelper extends BaseHelper {
         type(By.name("home"), contactData.getHomePhone());
 
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getGroupName());
+            new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getIndexGroup());
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }

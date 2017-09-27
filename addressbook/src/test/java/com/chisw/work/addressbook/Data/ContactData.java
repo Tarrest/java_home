@@ -9,9 +9,9 @@ public class ContactData {
     private final String company;
     private final String address;
     private final String homePhone;
-    private final int groupName;
+    private final int indexGroup;
 
-    public ContactData(String fName, String mName, String lName, String nick, String title, String company, String address, String homePhone, int  groupName) {
+    public ContactData(String fName, String mName, String lName, String nick, String title, String company, String address, String homePhone, int  indexGroup) {
         this.fName = fName;
         this.mName = mName;
         this.lName = lName;
@@ -20,7 +20,7 @@ public class ContactData {
         this.company = company;
         this.address = address;
         this.homePhone = homePhone;
-        this.groupName = groupName;
+        this.indexGroup = indexGroup;
     }
 
     public String getfName() {
@@ -55,7 +55,7 @@ public class ContactData {
         return homePhone;
     }
 
-    public int getGroupName() {
-        return groupName;
+    public int getIndexGroup() {
+        return indexGroup;
     }
 }

@@ -51,10 +51,6 @@ public class ApplicationManager {
         return navigationHelper;
     }
 
-    public SessionHelper getSessionHelper() {
-        return sessionHelper;
-    }
-
     public GroupsHelper getGroupsHelper() {
         return groupsHelper;
     }
