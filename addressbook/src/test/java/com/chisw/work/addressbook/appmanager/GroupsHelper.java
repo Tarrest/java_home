@@ -48,7 +48,7 @@ public class GroupsHelper extends BaseHelper{
 
     public void createGroup() {
         createNewGroup();
-        fillGroupForm(new GroupData("test123", "erwrqwer213123123", "hjsdhasdf"));
+        fillGroupForm(new GroupData("test1", null, null));
         submitGroupCreation();
 
     }
@@ -66,7 +66,8 @@ public class GroupsHelper extends BaseHelper{
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements) {
             String name = element.getText();
-            GroupData group = new GroupData(name, null, null);
+            String groupId = element.findElement(By.tagName("input")).getAttribute("value");
+            GroupData group = new GroupData(name, null, null, groupId);
             groups.add(group);
         }
         return groups;
