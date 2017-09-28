@@ -4,8 +4,12 @@ import com.chisw.work.addressbook.Data.ContactData;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactsHelper extends BaseHelper {
 
@@ -17,11 +21,11 @@ public class ContactsHelper extends BaseHelper {
         click(By.linkText("ADD_NEW"));
     }
 
-    public void submit() {
+    public void submitContactForm() {
         click(By.name("submit"));
     }
 
-    public void update() {
+    public void submitUpdateContactForm() {
         click(By.name("update"));
     }
 
@@ -43,7 +47,7 @@ public class ContactsHelper extends BaseHelper {
     }
 
 
-    public void edit() {
+    public void pressEditContact() {
         click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
@@ -54,7 +58,7 @@ public class ContactsHelper extends BaseHelper {
     public void createContact() {
         createNewContact();
         fillContactForm(new ContactData("eqwrqwer", "fgdgfgfgf", "teat","bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
-        submit();
+        submitContactForm();
     }
 
     public void selectContact() {
