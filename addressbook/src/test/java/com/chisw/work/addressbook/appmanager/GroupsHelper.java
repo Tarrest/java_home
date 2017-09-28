@@ -53,6 +53,23 @@ public class GroupsHelper extends BaseHelper{
 
     }
 
+    public void modifyGroup(int index, GroupData group) {
+        selectCreatedGroup(index);
+        editGroup();
+        fillGroupForm(group);
+        updateGroup();
+        goToGroupsPage();
+    }
+
+    public void goToGroupsPage() {
+        if (isElementPresent(By.tagName("h1"))
+                && driver.findElement(By.tagName("h1")).getText().equals("Groups")
+                && isElementPresent(By.name("new"))) {
+            return;
+        }
+        click(By.linkText("GROUPS"));
+    }
+
     public boolean isGroupsCreated() {
         return isElementPresent(By.name("selected[]"));
     }

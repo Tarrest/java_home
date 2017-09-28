@@ -2,6 +2,7 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Comparator;
@@ -12,13 +13,13 @@ public class TestGroupCreation extends TestBase {
 
     @Test
     public void checkGroupCreation() {
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupsHelper().goToGroupsPage();
         List<GroupData> before = app.getGroupsHelper().getGroupsList();
         app.getGroupsHelper().createNewGroup();
         GroupData group = new GroupData("test000", "test000", null);
         app.getGroupsHelper().fillGroupForm(group);
         app.getGroupsHelper().submitGroupCreation();
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupsHelper().goToGroupsPage();
         List<GroupData> after = app.getGroupsHelper().getGroupsList();
         Assert.assertEquals(after.size(), before.size() + 1);
 

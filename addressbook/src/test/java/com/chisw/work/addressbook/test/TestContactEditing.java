@@ -9,7 +9,7 @@ public class TestContactEditing extends TestBase {
     public void checkContactEditing() {
         if (! app.getContactHelper().isContactCreared()) {
             if (! app.getGroupsHelper().isGroupsCreated()) {
-                app.getNavigationHelper().goToGroupsPage();
+                app.getGroupsHelper().goToGroupsPage();
                 app.getGroupsHelper().createGroup();
                 app.getNavigationHelper().backHomePage();
             }

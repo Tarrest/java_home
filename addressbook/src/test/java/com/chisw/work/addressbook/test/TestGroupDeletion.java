@@ -2,6 +2,7 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Comparator;
@@ -9,17 +10,21 @@ import java.util.List;
 
 public class TestGroupDeletion extends TestBase {
 
-    @Test
-    public void checkGroupDeletion() {
-        app.getNavigationHelper().goToGroupsPage();
+    @BeforeMethod
+    public void checkPreconditions() {
+        app.getGroupsHelper().goToGroupsPage();
         if (! app.getGroupsHelper().isGroupsCreated()) {
             app.getGroupsHelper().createGroup();
-            app.getNavigationHelper().goToGroupsPage();
+            app.getGroupsHelper().goToGroupsPage();
         }
+    }
+
+    @Test
+    public void checkGroupDeletion() {
         List<GroupData> before = app.getGroupsHelper().getGroupsList();
         app.getGroupsHelper().selectCreatedGroup(before.size() - 1);
         app.getGroupsHelper().deleteGroup();
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupsHelper().goToGroupsPage();
         List<GroupData> after = app.getGroupsHelper().getGroupsList();
         Assert.assertEquals(after.size(), before.size() - 1);
 /*        before.remove(before.size() - 1);

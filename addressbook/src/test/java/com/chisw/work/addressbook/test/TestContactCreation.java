@@ -8,7 +8,7 @@ public class TestContactCreation extends TestBase {
 
     @Test (enabled = false)
     public void checkContactCreation() {
-        app.getNavigationHelper().goToGroupsPage();
+        app.getGroupsHelper().goToGroupsPage();
         if (! app.getGroupsHelper().isGroupsCreated()) {
             app.getGroupsHelper().createGroup();
             app.getNavigationHelper().backHomePage();

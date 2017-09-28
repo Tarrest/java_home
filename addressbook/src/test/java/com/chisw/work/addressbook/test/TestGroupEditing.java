@@ -2,6 +2,7 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Collection;
@@ -11,28 +12,25 @@ import java.util.List;
 
 public class TestGroupEditing extends TestBase {
 
-    @Test
-    public void checkGroupEditing() {
-        app.getNavigationHelper().goToGroupsPage();
+
+    @BeforeMethod
+    public void checkPreconditions() {
+        app.getGroupsHelper().goToGroupsPage();
         if (! app.getGroupsHelper().isGroupsCreated()) {
             app.getGroupsHelper().createGroup();
-            app.getNavigationHelper().goToGroupsPage();
+            app.getGroupsHelper().goToGroupsPage();
         }
+    }
+
+    @Test
+    public void checkGroupEditing() {
         List<GroupData> before = app.getGroupsHelper().getGroupsList();
-        app.getGroupsHelper().selectCreatedGroup(before.size() - 1);
-        app.getGroupsHelper().editGroup();
-        GroupData group = new GroupData("test 2", "test 2.1", "test 2.2", before.get(before.size() - 1).getId());
-        app.getGroupsHelper().fillGroupForm(group);
-        app.getGroupsHelper().updateGroup();
-        app.getNavigationHelper().goToGroupsPage();
+        int index = before.size() - 1;
+        GroupData group = new GroupData("test 2", "test 2.1", "test 2.2", before.get(index).getId());
+        app.getGroupsHelper().modifyGroup(index, group);
         List<GroupData> after = app.getGroupsHelper().getGroupsList();
         Assert.assertEquals(before.size(), after.size());
-
-/*        before.remove(before.size() - 1);
-        before.add(group);
-        Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));*/
-
-        before.remove(before.size() - 1);
+        before.remove(index);
         before.add(group);
         Comparator<? super GroupData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());
         before.sort(byId);
@@ -40,4 +38,5 @@ public class TestGroupEditing extends TestBase {
         Assert.assertEquals(before, after);
 
     }
+
 }
