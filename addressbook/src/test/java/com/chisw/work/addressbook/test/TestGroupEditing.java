@@ -5,9 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Collection;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class TestGroupEditing extends TestBase {
@@ -15,20 +13,20 @@ public class TestGroupEditing extends TestBase {
 
     @BeforeMethod
     public void checkPreconditions() {
-        app.getGroupsHelper().goToGroupsPage();
-        if (! app.getGroupsHelper().isGroupsCreated()) {
-            app.getGroupsHelper().createGroup();
-            app.getGroupsHelper().goToGroupsPage();
+        app.goTo().groupPage();
+        if (app.group().list().size() == 0) {
+            app.group().createGroup();
+            app.goTo().groupPage();
         }
     }
 
     @Test
     public void checkGroupEditing() {
-        List<GroupData> before = app.getGroupsHelper().getGroupsList();
+        List<GroupData> before = app.group().list();
         int index = before.size() - 1;
         GroupData group = new GroupData("test 2", "test 2.1", "test 2.2", before.get(index).getId());
-        app.getGroupsHelper().modifyGroup(index, group);
-        List<GroupData> after = app.getGroupsHelper().getGroupsList();
+        app.group().modify(index, group);
+        List<GroupData> after = app.group().list();
         Assert.assertEquals(before.size(), after.size());
         before.remove(index);
         before.add(group);

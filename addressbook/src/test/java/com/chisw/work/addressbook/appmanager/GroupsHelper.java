@@ -14,7 +14,7 @@ public class GroupsHelper extends BaseHelper{
         super(driver);
     }
 
-    public void createNewGroup() {
+    public void create() {
       click(By.name("new"));
     }
 
@@ -47,34 +47,35 @@ public class GroupsHelper extends BaseHelper{
 
 
     public void createGroup() {
-        createNewGroup();
+        create();
         fillGroupForm(new GroupData("test1", null, null));
         submitGroupCreation();
 
     }
 
-    public void modifyGroup(int index, GroupData group) {
+    public void modify(int index, GroupData group) {
         selectCreatedGroup(index);
         editGroup();
         fillGroupForm(group);
         updateGroup();
-        goToGroupsPage();
+        groupPage();
     }
 
-    public void goToGroupsPage() {
-        if (isElementPresent(By.tagName("h1"))
-                && driver.findElement(By.tagName("h1")).getText().equals("Groups")
-                && isElementPresent(By.name("new"))) {
-            return;
-        }
+    public void delete(int index) {
+        selectCreatedGroup(index);
+        deleteGroup();
+        groupPage();
+    }
+
+    public void groupPage() {
         click(By.linkText("GROUPS"));
     }
 
-    public boolean isGroupsCreated() {
+    public boolean lis() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public List<GroupData> getGroupsList() {
+    public List<GroupData> list() {
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements) {
