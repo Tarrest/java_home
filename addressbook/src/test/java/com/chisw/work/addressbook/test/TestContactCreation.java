@@ -3,12 +3,10 @@ package com.chisw.work.addressbook.test;
 import com.chisw.work.addressbook.Data.ContactData;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 
 public class TestContactCreation extends TestBase {
 
-    @Test
+    @Test (enabled = false)
     public void checkContactCreation() {
         app.getNavigationHelper().goToGroupsPage();
         if (! app.getGroupsHelper().isGroupsCreated()) {
@@ -16,7 +14,7 @@ public class TestContactCreation extends TestBase {
             app.getNavigationHelper().backHomePage();
         }
         app.getContactHelper().createNewContact();
-        app.getContactHelper().fillContactForm(new ContactData("eqwrqwer", "fgdgfgfgf", "teat","bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
+        app.getContactHelper().fillContactForm(new ContactData("01 test", "01 fgdgfgfgf", " 01 teat"," 01bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
         app.getContactHelper().submitContactForm();
     }
 

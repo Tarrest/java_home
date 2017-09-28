@@ -17,7 +17,7 @@ public class TestContactEditing extends TestBase {
             app.getNavigationHelper().backHomePage();
         }
         app.getContactHelper().pressEditContact();
-        app.getContactHelper().fillContactForm(new ContactData("new name123", "new fdssd", "new 23","new c33", "wewwwe","new qaer", "dfsfsdf dfssd fs 12 ","+2156348446", 1), false);
+        app.getContactHelper().fillContactForm(new ContactData("02 new name123", "02 new fdssd", "02 new 23","02 new c33", "02 wewwwe","02 new qaer", "02dfsfsdf dfssd fs 12 ","+2156348446", 1), false);
         app.getContactHelper().submitUpdateContactForm();
     }
 

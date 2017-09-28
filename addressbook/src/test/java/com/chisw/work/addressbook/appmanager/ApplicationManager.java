@@ -12,7 +12,7 @@ public class ApplicationManager {
     WebDriver driver;
     private SessionHelper sessionHelper;
     private NavigationHelper navigationHelper;
-    private ContactHelper contactHelper;
+    private ContactsHelper contactsHelper;
     private GroupsHelper groupsHelper;
     private String browser;
 
@@ -32,7 +32,7 @@ public class ApplicationManager {
         }
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         driver.get("http://localhost/addressbook/");
-        contactHelper = new ContactHelper(driver);
+        contactsHelper = new ContactsHelper(driver);
         navigationHelper = new NavigationHelper(driver);
         sessionHelper = new SessionHelper(driver);
         groupsHelper = new GroupsHelper(driver);
@@ -43,8 +43,8 @@ public class ApplicationManager {
         driver.quit();
     }
 
-    public ContactHelper getContactHelper() {
-        return contactHelper;
+    public ContactsHelper getContactHelper() {
+        return contactsHelper;
     }
 
     public NavigationHelper getNavigationHelper() {

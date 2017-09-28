@@ -3,16 +3,17 @@ package com.chisw.work.addressbook.appmanager;
 import com.chisw.work.addressbook.Data.ContactData;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class ContactHelper extends BaseHelper {
+public class ContactsHelper extends BaseHelper {
 
-    public ContactHelper(WebDriver driver) {
+    public ContactsHelper(WebDriver driver) {
         super(driver);
     }
 
@@ -69,5 +70,6 @@ public class ContactHelper extends BaseHelper {
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
+
 
 }

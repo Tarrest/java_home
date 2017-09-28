@@ -57,10 +57,6 @@ public class GroupsHelper extends BaseHelper{
         return isElementPresent(By.name("selected[]"));
     }
 
-    public int getGroupsCount() {
-        return driver.findElements(By.name("selected[]")).size();
-    }
-
     public List<GroupData> getGroupsList() {
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
