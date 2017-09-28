@@ -4,24 +4,37 @@ public class GroupData {
     private final String groupName;
     private final String groupLogo;
     private final String groupComment;
-    private final String groupId;
+    private int groupId;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        GroupData groupData = (GroupData) o;
-
-        if (groupName != null ? !groupName.equals(groupData.groupName) : groupData.groupName != null) return false;
-        return groupId != null ? groupId.equals(groupData.groupId) : groupData.groupId == null;
+    public GroupData(String groupName, String groupLogo, String groupComment) {
+        this.groupName = groupName;
+        this.groupLogo = groupLogo;
+        this.groupComment = groupComment;
+        this.groupId = 0;
     }
 
-    @Override
-    public int hashCode() {
-        int result = groupName != null ? groupName.hashCode() : 0;
-        result = 31 * result + (groupId != null ? groupId.hashCode() : 0);
-        return result;
+    public GroupData(String groupName, String groupLogo, String groupComment, int groupId) {
+        this.groupName = groupName;
+        this.groupLogo = groupLogo;
+        this.groupComment = groupComment;
+        this.groupId = groupId;
+    }
+
+    public int getId() {
+        return groupId;
+    }
+    public String getGroupName() {
+        return groupName;
+    }
+    public String getGroupLogo() {
+        return groupLogo;
+    }
+    public String getGroupComment() {
+        return groupComment;
+    }
+
+    public void setId(int groupId) {
+        this.groupId = groupId;
     }
 
     @Override
@@ -32,33 +45,20 @@ public class GroupData {
                 '}';
     }
 
-    public String getId() {
-        return groupId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        GroupData groupData = (GroupData) o;
+        if (groupId != groupData.groupId) return false;
+        return groupName != null ? groupName.equals(groupData.groupName) : groupData.groupName == null;
     }
 
-    public GroupData(String groupName, String groupLogo, String groupComment, String groupId) {
-        this.groupName = groupName;
-        this.groupLogo = groupLogo;
-        this.groupComment = groupComment;
-        this.groupId = groupId;
+    @Override
+    public int hashCode() {
+        int result = groupName != null ? groupName.hashCode() : 0;
+        result = 31 * result + groupId;
+        return result;
     }
 
-    public GroupData(String groupName, String groupLogo, String groupComment) {
-        this.groupName = groupName;
-        this.groupLogo = groupLogo;
-        this.groupComment = groupComment;
-        this.groupId = null;
-    }
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public String getGroupLogo() {
-        return groupLogo;
-    }
-
-    public String getGroupComment() {
-        return groupComment;
-    }
 }
