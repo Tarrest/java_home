@@ -8,14 +8,14 @@ public class TestContactCreation extends TestBase {
 
     @Test (enabled = false)
     public void checkContactCreation() {
-        app.getGroupsHelper().goToGroupsPage();
-        if (! app.getGroupsHelper().isGroupsCreated()) {
-            app.getGroupsHelper().createGroup();
-            app.getNavigationHelper().backHomePage();
+        app.groups().goToGroupsPage();
+        if (! app.groups().isGroupsCreated()) {
+            app.groups().createGroup();
+            app.navigation().backHomePage();
         }
-        app.getContactHelper().createNewContact();
-        app.getContactHelper().fillContactForm(new ContactData("01 test", "01 fgdgfgfgf", " 01 teat"," 01bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
-        app.getContactHelper().submitContactForm();
+        app.contacts().createNewContact();
+        app.contacts().fillContactForm(new ContactData("01 test", "01 fgdgfgfgf", " 01 teat"," 01bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
+        app.contacts().submitContactForm();
     }
 
 }

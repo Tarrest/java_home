@@ -7,18 +7,18 @@ public class TestContactEditing extends TestBase {
 
     @Test
     public void checkContactEditing() {
-        if (! app.getContactHelper().isContactCreared()) {
-            if (! app.getGroupsHelper().isGroupsCreated()) {
-                app.getGroupsHelper().goToGroupsPage();
-                app.getGroupsHelper().createGroup();
-                app.getNavigationHelper().backHomePage();
+        if (! app.contacts().isContactCreared()) {
+            if (! app.groups().isGroupsCreated()) {
+                app.groups().goToGroupsPage();
+                app.groups().createGroup();
+                app.navigation().backHomePage();
             }
-            app.getContactHelper().createContact();
-            app.getNavigationHelper().backHomePage();
+            app.contacts().createContact();
+            app.navigation().backHomePage();
         }
-        app.getContactHelper().pressEditContact();
-        app.getContactHelper().fillContactForm(new ContactData("02 new name123", "02 new fdssd", "02 new 23","02 new c33", "02 wewwwe","02 new qaer", "02dfsfsdf dfssd fs 12 ","+2156348446", 1), false);
-        app.getContactHelper().submitUpdateContactForm();
+        app.contacts().pressEditContact();
+        app.contacts().fillContactForm(new ContactData("02 new name123", "02 new fdssd", "02 new 23","02 new c33", "02 wewwwe","02 new qaer", "02dfsfsdf dfssd fs 12 ","+2156348446", 1), false);
+        app.contacts().submitUpdateContactForm();
     }
 
 }

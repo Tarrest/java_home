@@ -6,17 +6,17 @@ public class TestContactDeletion extends TestBase {
 
     @Test
     public void checkContactDeletion() {
-        if (! app.getContactHelper().isContactCreared()) {
-            if (! app.getGroupsHelper().isGroupsCreated()) {
-                app.getGroupsHelper().goToGroupsPage();
-                app.getGroupsHelper().createGroup();
-                app.getNavigationHelper().backHomePage();
+        if (! app.contacts().isContactCreared()) {
+            if (! app.groups().isGroupsCreated()) {
+                app.groups().goToGroupsPage();
+                app.groups().createGroup();
+                app.navigation().backHomePage();
             }
-            app.getContactHelper().createContact();
-            app.getNavigationHelper().backHomePage();
+            app.contacts().createContact();
+            app.navigation().backHomePage();
         }
-        app.getContactHelper().selectContact();
-        app.getContactHelper().deleteContact();
+        app.contacts().selectContact();
+        app.contacts().deleteContact();
     }
 
 }

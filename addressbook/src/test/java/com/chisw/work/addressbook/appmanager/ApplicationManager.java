@@ -43,15 +43,15 @@ public class ApplicationManager {
         driver.quit();
     }
 
-    public ContactsHelper getContactHelper() {
+    public ContactsHelper contacts() {
         return contactsHelper;
     }
 
-    public NavigationHelper getNavigationHelper() {
+    public NavigationHelper navigation() {
         return navigationHelper;
     }
 
-    public GroupsHelper getGroupsHelper() {
+    public GroupsHelper groups() {
         return groupsHelper;
     }
 }
