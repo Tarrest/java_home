@@ -47,7 +47,7 @@ public class ApplicationManager {
         return contactsHelper;
     }
 
-    public NavigationHelper navigation() {
+    public NavigationHelper goTo() {
         return navigationHelper;
     }
 

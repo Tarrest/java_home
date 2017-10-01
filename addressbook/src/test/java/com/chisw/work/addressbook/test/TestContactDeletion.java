@@ -8,12 +8,12 @@ public class TestContactDeletion extends TestBase {
     public void checkContactDeletion() {
         if (! app.contacts().isContactCreared()) {
             if (! app.groups().isGroupsCreated()) {
-                app.groups().goToGroupsPage();
-                app.groups().createGroup();
-                app.navigation().backHomePage();
+                app.goTo().groupPage();
+                app.groups().createGroupInBeforeMethod();
+                app.goTo().backHomePage();
             }
             app.contacts().createContact();
-            app.navigation().backHomePage();
+            app.goTo().backHomePage();
         }
         app.contacts().selectContact();
         app.contacts().deleteContact();

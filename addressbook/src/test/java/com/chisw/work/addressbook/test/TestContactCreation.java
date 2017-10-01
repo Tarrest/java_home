@@ -8,10 +8,10 @@ public class TestContactCreation extends TestBase {
 
     @Test (enabled = false)
     public void checkContactCreation() {
-        app.groups().goToGroupsPage();
+        app.goTo().groupPage();
         if (! app.groups().isGroupsCreated()) {
-            app.groups().createGroup();
-            app.navigation().backHomePage();
+            app.groups().createGroupInBeforeMethod();
+            app.goTo().backHomePage();
         }
         app.contacts().createNewContact();
         app.contacts().fillContactForm(new ContactData("01 test", "01 fgdgfgfgf", " 01 teat"," 01bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);

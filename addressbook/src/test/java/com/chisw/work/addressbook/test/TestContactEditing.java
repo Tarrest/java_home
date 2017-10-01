@@ -9,12 +9,12 @@ public class TestContactEditing extends TestBase {
     public void checkContactEditing() {
         if (! app.contacts().isContactCreared()) {
             if (! app.groups().isGroupsCreated()) {
-                app.groups().goToGroupsPage();
-                app.groups().createGroup();
-                app.navigation().backHomePage();
+                app.goTo().groupPage();
+                app.groups().createGroupInBeforeMethod();
+                app.goTo().backHomePage();
             }
             app.contacts().createContact();
-            app.navigation().backHomePage();
+            app.goTo().backHomePage();
         }
         app.contacts().pressEditContact();
         app.contacts().fillContactForm(new ContactData("02 new name123", "02 new fdssd", "02 new 23","02 new c33", "02 wewwwe","02 new qaer", "02dfsfsdf dfssd fs 12 ","+2156348446", 1), false);

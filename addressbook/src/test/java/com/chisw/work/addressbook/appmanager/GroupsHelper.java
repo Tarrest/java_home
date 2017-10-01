@@ -14,7 +14,7 @@ public class GroupsHelper extends BaseHelper{
         super(driver);
     }
 
-    public void createNewGroup() {
+    public void clickCreateNewGroup() {
       click(By.name("new"));
     }
 
@@ -32,8 +32,11 @@ public class GroupsHelper extends BaseHelper{
         List<WebElement> groupsList = driver.findElements(By.name("selected[]"));
         groupsList.get(index).click();
     }
+    public void reloadGroupPage() {
+        click(By.linkText("GROUPS"));
+    }
 
-    public void deleteGroup() {
+    public void clickDeleteGroup() {
         click(By.name("delete"));
     }
 
@@ -46,11 +49,18 @@ public class GroupsHelper extends BaseHelper{
     }
 
 
-    public void createGroup() {
-        createNewGroup();
-        fillGroupForm(new GroupData("test1", null, null));
+    public void createGroupInBeforeMethod() {
+        clickCreateNewGroup();
+        fillGroupForm(new GroupData("test1", "test2", "test3"));
         submitGroupCreation();
+        reloadGroupPage();
+    }
 
+    public void createNewGroup(GroupData group) {
+        clickCreateNewGroup();
+        fillGroupForm(group);
+        submitGroupCreation();
+        reloadGroupPage();
     }
 
     public void modifyGroup(int index, GroupData group) {
@@ -58,17 +68,15 @@ public class GroupsHelper extends BaseHelper{
         editGroup();
         fillGroupForm(group);
         updateGroup();
-        goToGroupsPage();
+        reloadGroupPage();
     }
 
-    public void goToGroupsPage() {
-        if (isElementPresent(By.tagName("h1"))
-                && driver.findElement(By.tagName("h1")).getText().equals("Groups")
-                && isElementPresent(By.name("new"))) {
-            return;
-        }
-        click(By.linkText("GROUPS"));
+    public void deleteGroup(int index) {
+        selectCreatedGroup(index);
+        clickDeleteGroup();
+        reloadGroupPage();
     }
+
 
     public boolean isGroupsCreated() {
         return isElementPresent(By.name("selected[]"));

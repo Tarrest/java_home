@@ -13,10 +13,9 @@ public class TestGroupEditing extends TestBase {
 
     @BeforeMethod
     public void checkPreconditions() {
-        app.groups().goToGroupsPage();
+        app.goTo().groupPage();
         if (! app.groups().isGroupsCreated()) {
-            app.groups().createGroup();
-            app.groups().goToGroupsPage();
+            app.groups().createGroupInBeforeMethod();
         }
     }
 
