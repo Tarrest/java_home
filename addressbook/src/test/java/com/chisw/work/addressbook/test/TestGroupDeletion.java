@@ -13,17 +13,17 @@ public class TestGroupDeletion extends TestBase {
     @BeforeMethod
     public void checkPreconditions() {
         app.goTo().groupPage();
-        if (! app.groups().isGroupsCreated()) {
+        if (! app.groups().isGroupsCreated()) { //(app.groups().list().size() == 0)
             app.groups().createGroupInBeforeMethod();
         }
     }
 
     @Test
     public void checkGroupDeletion() {
-        List<GroupData> before = app.groups().getGroupsList();
+        List<GroupData> before = app.groups().list();
         int index = before.size() - 1;
         app.groups().deleteGroup(index);
-        List<GroupData> after = app.groups().getGroupsList();
+        List<GroupData> after = app.groups().list();
         Assert.assertEquals(after.size(), index);
         before.remove(index);
         Comparator<? super GroupData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());

@@ -35,7 +35,7 @@ public class ContactData {
         this.address = address;
         this.homePhone = homePhone;
         this.indexGroup = indexGroup;
-        this.contactId = 0;
+        this.contactId = Integer.MAX_VALUE;
     }
 
     public String getfName() {

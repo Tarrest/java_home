@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class TestContactCreation extends TestBase {
 
-    @Test (enabled = false)
+    @Test
     public void checkContactCreation() {
         app.goTo().groupPage();
         if (! app.groups().isGroupsCreated()) {

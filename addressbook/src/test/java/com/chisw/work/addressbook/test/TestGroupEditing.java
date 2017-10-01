@@ -21,11 +21,11 @@ public class TestGroupEditing extends TestBase {
 
     @Test
     public void checkGroupEditing() {
-        List<GroupData> before = app.groups().getGroupsList();
+        List<GroupData> before = app.groups().list();
         int index = before.size() - 1;
         GroupData group = new GroupData("test 2", "test 2.1", "test 2.2", before.get(index).getId());
         app.groups().modifyGroup(index, group);
-        List<GroupData> after = app.groups().getGroupsList();
+        List<GroupData> after = app.groups().list();
         Assert.assertEquals(before.size(), after.size());
         before.remove(index);
         before.add(group);
