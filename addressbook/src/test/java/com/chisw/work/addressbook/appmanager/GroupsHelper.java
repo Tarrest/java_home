@@ -51,7 +51,7 @@ public class GroupsHelper extends BaseHelper{
 
     public void createGroupInBeforeMethod() {
         clickCreateNewGroup();
-        fillGroupForm(new GroupData("test1", "test2", "test3"));
+        fillGroupForm(new GroupData().withGroupName("test1").withGroupLogo("test2").withGroupName("test3"));
         submitGroupCreation();
         reloadGroupPage();
     }
@@ -88,7 +88,7 @@ public class GroupsHelper extends BaseHelper{
         for (WebElement element : elements) {
             String name = element.getText();
             int groupId = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            GroupData group = new GroupData(name, null, null, groupId);
+            GroupData group = new GroupData().withGroupName(name).withId(groupId);
             groups.add(group);
         }
         return groups;

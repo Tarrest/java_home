@@ -1,21 +1,39 @@
 package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.ContactData;
+import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.util.Comparator;
+import java.util.List;
 
 
 public class TestContactCreation extends TestBase {
 
-    @Test
-    public void checkContactCreation() {
+    @BeforeMethod
+    public void checkPreconditions() {
         app.goTo().groupPage();
         if (! app.groups().isGroupsCreated()) {
             app.groups().createGroupInBeforeMethod();
-            app.goTo().backHomePage();
         }
-        app.contacts().createNewContact();
-        app.contacts().fillContactForm(new ContactData("01 test", "01 fgdgfgfgf", " 01 teat"," 01bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
-        app.contacts().submitContactForm();
+    }
+
+
+    @Test
+    public void checkContactCreation() {
+        app.goTo().homePage();
+        List<ContactData> before = app.contacts().list();
+        ContactData contact = new ContactData().withFirstName("new Name").withLastName("new name 2").withIndexGroup(1);
+        app.contacts().createContact(contact);
+        List<ContactData> after = app.contacts().list();
+        Assert.assertEquals(after.size(), before.size()+1);
+        before.add(contact);
+        Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
+        before.sort(byId);
+        after.sort(byId);
+        Assert.assertEquals(after, before);
+
     }
 
 }

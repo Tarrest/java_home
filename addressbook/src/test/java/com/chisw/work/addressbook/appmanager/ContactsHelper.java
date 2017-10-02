@@ -17,7 +17,7 @@ public class ContactsHelper extends BaseHelper {
         super(driver);
     }
 
-    public void createNewContact() {
+    public void clickCreateNewContact() {
         click(By.linkText("ADD_NEW"));
     }
 
@@ -55,20 +55,39 @@ public class ContactsHelper extends BaseHelper {
         return isElementPresent(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
-    public void createContact() {
-        createNewContact();
-        fillContactForm(new ContactData("eqwrqwer", "fgdgfgfgf", "teat","bvbvnbnvb", "nmvnnmvbn", "nuuuunu", "dfgdfgdfgdfg", "0123465489", 1), true);
-        submitContactForm();
-    }
-
     public void selectContact() {
         click(By.name("selected[]"));
+    }
+
+    public void reloadPage() {
+        click(By.linkText("HOME"));
+    }
+
+    public void createContactInBeforeMethod() {
+        clickCreateNewContact();
+        fillContactForm(new ContactData().withFirstName("eqwrqwer").withLastName("fgdgfgfgf").withIndexGroup(1), true);
+        submitContactForm();
+        reloadPage();
+    }
+
+    public void modifyContact() {
+        pressEditContact();
+        fillContactForm(new ContactData().withFirstName("new eqwrqwer").withLastName("new fgdgfgfgf").withIndexGroup(1), false);
+        submitUpdateContactForm();
+        reloadPage();
     }
 
     public void deleteContact() {
         click(By.xpath(".//*[@id='content']/form[2]/div[2]/input"));
         Alert alert = driver.switchTo().alert();
         alert.accept();
+    }
+
+    public void createContact(ContactData contact) {
+        clickCreateNewContact();
+        fillContactForm(contact, true);
+        submitContactForm();
+        reloadPage();
     }
 
     public List<ContactData> list() {
@@ -79,8 +98,9 @@ public class ContactsHelper extends BaseHelper {
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
-            //contacts.add(new ContactData().withId(id).withFirtsName(firstName).withLastName(lastName));
+            contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName));
         }
        return contacts;
     }
+
 }

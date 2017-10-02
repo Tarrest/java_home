@@ -1,24 +1,11 @@
 package com.chisw.work.addressbook.Data;
 
 public class GroupData {
-    private final String groupName;
-    private final String groupLogo;
-    private final String groupComment;
-    private int groupId;
 
-    public GroupData(String groupName, String groupLogo, String groupComment) {
-        this.groupName = groupName;
-        this.groupLogo = groupLogo;
-        this.groupComment = groupComment;
-        this.groupId = Integer.MAX_VALUE;
-    }
-
-    public GroupData(String groupName, String groupLogo, String groupComment, int groupId) {
-        this.groupName = groupName;
-        this.groupLogo = groupLogo;
-        this.groupComment = groupComment;
-        this.groupId = groupId;
-    }
+    private String groupName;
+    private String groupLogo;
+    private String groupComment;
+    private int groupId = Integer.MAX_VALUE;;
 
     public int getId() {
         return groupId;
@@ -33,8 +20,21 @@ public class GroupData {
         return groupComment;
     }
 
-    public void setId(int groupId) {
+    public GroupData withId(int groupId) {
         this.groupId = groupId;
+        return this;
+    }
+    public GroupData withGroupName(String groupName) {
+        this.groupName = groupName;
+        return this;
+    }
+    public GroupData withGroupLogo(String groupLogo) {
+        this.groupLogo = groupLogo;
+        return this;
+    }
+    public GroupData withGroupComment(String groupComment) {
+        this.groupComment = groupComment;
+        return this;
     }
 
     @Override

@@ -1,42 +1,17 @@
 package com.chisw.work.addressbook.Data;
 
 public class ContactData {
-    private final String fName;
-    private final String mName;
-    private final String lName;
-    private final String nick;
-    private final String title;
-    private final String company;
-    private final String address;
-    private final String homePhone;
-    private final int indexGroup;
-    private int contactId;
+    private String fName;
+    private String mName;
+    private String lName;
+    private String nick;
+    private String title;
+    private String company;
+    private String address;
+    private String homePhone;
+    private int indexGroup;
+    private int contactId = Integer.MAX_VALUE;
 
-    public ContactData(String fName, String mName, String lName, String nick, String title, String company, String address, String homePhone, int indexGroup, int contactId) {
-        this.fName = fName;
-        this.mName = mName;
-        this.lName = lName;
-        this.nick = nick;
-        this.title = title;
-        this.company = company;
-        this.address = address;
-        this.homePhone = homePhone;
-        this.indexGroup = indexGroup;
-        this.contactId = contactId;
-    }
-
-    public ContactData(String fName, String mName, String lName, String nick, String title, String company, String address, String homePhone, int indexGroup) {
-        this.fName = fName;
-        this.mName = mName;
-        this.lName = lName;
-        this.nick = nick;
-        this.title = title;
-        this.company = company;
-        this.address = address;
-        this.homePhone = homePhone;
-        this.indexGroup = indexGroup;
-        this.contactId = Integer.MAX_VALUE;
-    }
 
     public String getfName() {
         return fName;
@@ -78,16 +53,61 @@ public class ContactData {
         return contactId;
     }
 
-    public void setContactId(int contactId) {
+    public ContactData withContactId(int contactId) {
         this.contactId = contactId;
+        return this;
+    }
+
+    public ContactData withFirstName(String fName) {
+        this.fName = fName;
+        return this;
+    }
+
+    public ContactData withMiddleName(String mName) {
+        this.mName = mName;
+        return this;
+    }
+
+    public ContactData withLastName(String lName) {
+        this.lName = lName;
+        return this;
+    }
+
+    public ContactData withNick(String nick) {
+        this.nick = nick;
+        return this;
+    }
+
+    public ContactData withTitle(String title) {
+        this.title = title;
+        return this;
+    }
+
+    public ContactData withCompany(String company) {
+        this.company = company;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
+        return this;
+    }
+
+    public ContactData withIndexGroup(int indexGroup) {
+        this.indexGroup = indexGroup;
+        return this;
     }
 
     @Override
     public String toString() {
         return "ContactData{" +
                 "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", contactId=" + contactId +
+                ", mName='" + mName + '\'' +
                 '}';
     }
 
@@ -98,7 +118,6 @@ public class ContactData {
 
         ContactData that = (ContactData) o;
 
-        if (contactId != that.contactId) return false;
         if (fName != null ? !fName.equals(that.fName) : that.fName != null) return false;
         return lName != null ? lName.equals(that.lName) : that.lName == null;
     }
@@ -107,8 +126,6 @@ public class ContactData {
     public int hashCode() {
         int result = fName != null ? fName.hashCode() : 0;
         result = 31 * result + (lName != null ? lName.hashCode() : 0);
-        result = 31 * result + contactId;
         return result;
     }
-
 }

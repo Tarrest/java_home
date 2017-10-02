@@ -9,7 +9,7 @@ public class NavigationHelper extends BaseHelper {
         super(driver);
     }
 
-    public void backHomePage() {
+    public void homePage() {
         if (isElementPresent(By.id("maintable"))) {
             return;
         }
