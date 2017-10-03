@@ -107,7 +107,7 @@ public class ContactData {
     public String toString() {
         return "ContactData{" +
                 "fName='" + fName + '\'' +
-                ", mName='" + mName + '\'' +
+                ", lName='" + lName + '\'' +
                 '}';
     }
 

@@ -46,6 +46,9 @@ public class ContactsHelper extends BaseHelper {
         }
     }
 
+    public void clickDeleteContact() {
+        click(By.xpath(".//*[@id='content']/form[2]/div[2]/input"));
+    }
 
     public void pressEditContact() {
         click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
@@ -55,8 +58,9 @@ public class ContactsHelper extends BaseHelper {
         return isElementPresent(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
-    public void selectContact() {
-        click(By.name("selected[]"));
+    public void selectContact(int index) {
+        List<WebElement> contactList = driver.findElements(By.name("selected[]"));
+        contactList.get(index).click();
     }
 
     public void reloadPage() {
@@ -69,18 +73,22 @@ public class ContactsHelper extends BaseHelper {
         submitContactForm();
         reloadPage();
     }
+    
 
-    public void modifyContact() {
+    public void modifyContact(int index) {
+        selectContact(index);
         pressEditContact();
         fillContactForm(new ContactData().withFirstName("new eqwrqwer").withLastName("new fgdgfgfgf").withIndexGroup(1), false);
         submitUpdateContactForm();
         reloadPage();
     }
 
-    public void deleteContact() {
-        click(By.xpath(".//*[@id='content']/form[2]/div[2]/input"));
+    public void deleteContact(int index) {
+        selectContact(index);
+        clickDeleteContact();
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        reloadPage();
     }
 
     public void createContact(ContactData contact) {
