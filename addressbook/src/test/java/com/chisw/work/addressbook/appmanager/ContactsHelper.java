@@ -75,10 +75,10 @@ public class ContactsHelper extends BaseHelper {
     }
     
 
-    public void modifyContact(int index) {
+    public void modifyContact(int index, ContactData contact) {
         selectContact(index);
         pressEditContact();
-        fillContactForm(new ContactData().withFirstName("new eqwrqwer").withLastName("new fgdgfgfgf").withIndexGroup(1), false);
+        fillContactForm(contact, false);
         submitUpdateContactForm();
         reloadPage();
     }
