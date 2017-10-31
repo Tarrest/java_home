@@ -23,10 +23,11 @@ public class TestGroupEditing extends TestBase {
     public void checkGroupEditing() {
         List<GroupData> before = app.groups().list();
         int index = before.size() - 1;
-        GroupData group = new GroupData().withGroupName("test 2").withGroupComment("test 2.1").withGroupLogo("test 2.2"). withId(before.get(index).getId());
+        GroupData group = new GroupData().withGroupName("ztest 2").withId(before.get(index).getId());
         app.groups().modifyGroup(index, group);
         List<GroupData> after = app.groups().list();
         Assert.assertEquals(before.size(), after.size());
+
         before.remove(index);
         before.add(group);
         Comparator<? super GroupData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());

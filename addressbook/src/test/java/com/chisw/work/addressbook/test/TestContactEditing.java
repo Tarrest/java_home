@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Comparator;
+import java.util.HashSet;
 import java.util.List;
 
 public class TestContactEditing extends TestBase {
@@ -25,19 +26,22 @@ public class TestContactEditing extends TestBase {
 
     @Test
     public void checkContactEditing() {
-        app.goTo().homePage();
+
         List<ContactData> before = app.contacts().list();
-        int index = before.size()- 1;
-        ContactData contact = new ContactData().withFirstName("11new eqwrqwer 1").withLastName("123 new fgdgfgfgf");
+        int index = before.size() - 1;
+        ContactData contact = new ContactData().withContactId(before.get(0).getContactId()).withLastName("99jofgdgfgfgf").withFirstName("99uocRtew eqwrqwer 1");
         app.contacts().modifyContact(index, contact);
         List<ContactData> after = app.contacts().list();
         Assert.assertEquals(before.size(), after.size());
-/*        before.remove(index);
+
+        before.remove(0);
         before.add(contact);
+
         Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
         before.sort(byId);
         after.sort(byId);
-        Assert.assertEquals(before, after);*/
+
+        Assert.assertEquals(before, after);
 
     }
 

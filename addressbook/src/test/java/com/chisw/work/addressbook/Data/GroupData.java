@@ -5,6 +5,15 @@ public class GroupData {
     private String groupName;
     private String groupLogo;
     private String groupComment;
+
+    @Override
+    public String toString() {
+        return "GroupData{" +
+                "groupName='" + groupName + '\'' +
+                ", groupId=" + groupId +
+                '}';
+    }
+
     private int groupId = Integer.MAX_VALUE;;
 
     public int getId() {
@@ -50,14 +59,6 @@ public class GroupData {
     @Override
     public int hashCode() {
         return groupName != null ? groupName.hashCode() : 0;
-    }
-
-    @Override
-    public String toString() {
-        return "GroupData{" +
-                "groupName='" + groupName + '\'' +
-                ", groupId='" + groupId + '\'' +
-                '}';
     }
 
 }

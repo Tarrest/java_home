@@ -32,11 +32,12 @@ public class TestContactDeletion extends TestBase {
         app.contacts().deleteContact(index);
         List<ContactData> after = app.contacts().list();
         Assert.assertEquals(after.size(), index);
+
         before.remove(index);
         Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
         before.sort(byId);
         after.sort(byId);
-        Assert.assertEquals(after, before);
+        Assert.assertEquals(before, after);
     }
 
 }

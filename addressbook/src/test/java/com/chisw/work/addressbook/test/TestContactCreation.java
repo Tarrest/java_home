@@ -24,15 +24,16 @@ public class TestContactCreation extends TestBase {
     public void checkContactCreation() {
         app.goTo().homePage();
         List<ContactData> before = app.contacts().list();
-        ContactData contact1 = new ContactData().withFirstName("44 new Name").withLastName("33 new name 2").withIndexGroup(1);
-        app.contacts().createContact(contact1);
+        ContactData contact = new ContactData().withFirstName("8new Name").withLastName("8ew name 2").withIndexGroup(1);
+        app.contacts().createContact(contact);
         List<ContactData> after = app.contacts().list();
         Assert.assertEquals(after.size(), before.size()+1);
-        before.add(contact1);
+
+        before.add(contact);
         Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
         before.sort(byId);
         after.sort(byId);
-        Assert.assertEquals(after, before);
+        Assert.assertEquals(before, after);
 
     }
 

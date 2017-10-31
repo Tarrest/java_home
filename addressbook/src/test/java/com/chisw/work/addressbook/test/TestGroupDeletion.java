@@ -25,6 +25,7 @@ public class TestGroupDeletion extends TestBase {
         app.groups().deleteGroup(index);
         List<GroupData> after = app.groups().list();
         Assert.assertEquals(after.size(), index);
+
         before.remove(index);
         Comparator<? super GroupData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());
         before.sort(byId);
