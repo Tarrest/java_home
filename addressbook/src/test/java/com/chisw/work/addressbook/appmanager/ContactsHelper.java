@@ -69,7 +69,7 @@ public class ContactsHelper extends BaseHelper {
 
     public void createContactInBeforeMethod() {
         clickCreateNewContact();
-        fillContactForm(new ContactData().withFirstName("eqwrqwer").withLastName("fgdgfgfgf").withIndexGroup(1), true);
+        fillContactForm(new ContactData().withFirstName("Ozzy").withLastName("Osbourne").withIndexGroup(1), true);
         submitContactForm();
         reloadPage();
     }
