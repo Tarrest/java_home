@@ -29,7 +29,7 @@ public class TestContactEditing extends TestBase {
 
         List<ContactData> before = app.contacts().list();
         int index = 0;
-        ContactData contact = new ContactData().withContactId(before.get(index).getContactId()).withLastName("Rose").withFirstName("Axl  eqwrqwer 1");
+        ContactData contact = new ContactData().withContactId(before.get(index).getContactId()).withLastName("Rose").withFirstName("Axl");
         app.contacts().modifyContact(index, contact);
         List<ContactData> after = app.contacts().list();
         Assert.assertEquals(before.size(), after.size());
