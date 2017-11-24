@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
 
 public class TestContactDeletion extends TestBase {
 
@@ -27,17 +28,14 @@ public class TestContactDeletion extends TestBase {
     @Test
     public void checkContactDeletion() {
         app.goTo().homePage();
-        List<ContactData> before = app.contacts().list();
-        int index = before.size() - 1;
-        app.contacts().deleteContact(index);
-        List<ContactData> after = app.contacts().list();
-        Assert.assertEquals(after.size(), index);
+        Set<ContactData> before = app.contacts().all();
+        ContactData deletedContact = before.iterator().next();
+        app.contacts().deleteContact(deletedContact);
+        Set<ContactData> after = app.contacts().all();
+        Assert.assertEquals(after.size(), before.size() - 1);
 
-        before.remove(index);
-        Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
-        before.sort(byId);
-        after.sort(byId);
-        Assert.assertEquals(before, after);
+        before.remove(deletedContact);
+        Assert.assertEquals(after, before);
     }
 
 }

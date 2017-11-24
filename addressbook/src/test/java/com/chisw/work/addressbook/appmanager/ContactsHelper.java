@@ -9,7 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactsHelper extends BaseHelper {
 
@@ -63,17 +65,21 @@ public class ContactsHelper extends BaseHelper {
         contactList.get(index).click();
     }
 
+    private void selectContactById(int contactId) {
+        driver.findElement(By.cssSelector("input[value='" + contactId + "']")).click();
+    }
+
     public void reloadPage() {
         click(By.linkText("HOME"));
     }
 
     public void createContactInBeforeMethod() {
         clickCreateNewContact();
-        fillContactForm(new ContactData().withFirstName("Ozzy").withLastName("Osbourne").withIndexGroup(1), true);
+        fillContactForm(new ContactData().withFirstName("Pedro").withLastName("Kortez").withIndexGroup(1), true);
         submitContactForm();
         reloadPage();
     }
-    
+
 
     public void modifyContact(int index, ContactData contact) {
         selectContact(index);
@@ -83,8 +89,17 @@ public class ContactsHelper extends BaseHelper {
         reloadPage();
     }
 
-    public void deleteContact(int index) {
-        selectContact(index);
+
+    public void modifyContact(ContactData contact) {
+        selectContactById(contact.getContactId());
+        pressEditContact();
+        fillContactForm(contact, false);
+        submitUpdateContactForm();
+        reloadPage();
+    }
+
+    public void deleteContact(ContactData deletedContact) {
+        selectContactById(deletedContact.getContactId());
         clickDeleteContact();
         Alert alert = driver.switchTo().alert();
         alert.accept();
@@ -106,10 +121,22 @@ public class ContactsHelper extends BaseHelper {
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
-            ContactData contact = new ContactData().withContactId(id).withLastName(lastName).withFirstName(firstName);
-            contacts.add(contact);
+            contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName));
         }
-       return contacts;
+        return contacts;
+    }
+
+    public Set<ContactData> all() {
+        Set<ContactData> contacts = new HashSet<>();
+        List<WebElement> rows = driver.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
+            String lastName = cells.get(1).getText();
+            String firstName = cells.get(2).getText();
+            contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName));
+        }
+        return contacts;
     }
 
 }

@@ -6,7 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class GroupsHelper extends BaseHelper{
 
@@ -15,7 +17,7 @@ public class GroupsHelper extends BaseHelper{
     }
 
     public void clickCreateNewGroup() {
-      click(By.name("new"));
+        click(By.name("new"));
     }
 
     public void fillGroupForm(GroupData groupData) {
@@ -32,6 +34,11 @@ public class GroupsHelper extends BaseHelper{
         List<WebElement> groupsList = driver.findElements(By.name("selected[]"));
         groupsList.get(index).click();
     }
+
+    public void selectCreatedGroupById(int id) {
+        driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
+    }
+
     public void reloadGroupPage() {
         click(By.linkText("GROUPS"));
     }
@@ -63,26 +70,31 @@ public class GroupsHelper extends BaseHelper{
         reloadGroupPage();
     }
 
-    public void modifyGroup(int index, GroupData group) {
-        selectCreatedGroup(index);
+    public void modifyGroup(GroupData group) {
+        selectCreatedGroupById(group.getId());
         editGroup();
         fillGroupForm(group);
         updateGroup();
         reloadGroupPage();
     }
 
-    public void deleteGroup(int index) {
+    public void delete(int index) {
         selectCreatedGroup(index);
         clickDeleteGroup();
         reloadGroupPage();
     }
 
+    public void delete(GroupData deletedGroup) {
+        selectCreatedGroupById(deletedGroup.getId());
+        clickDeleteGroup();
+        reloadGroupPage();
+    }
 
     public boolean isGroupsCreated() {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public List<GroupData> list() {
+    public List<GroupData> list() { //возвращаем список
         List<GroupData> groups = new ArrayList<GroupData>();
         List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
         for (WebElement element : elements) {
@@ -93,4 +105,18 @@ public class GroupsHelper extends BaseHelper{
         }
         return groups;
     }
+
+    public Set<GroupData> all() { //возвращаем множество
+        Set<GroupData> groups = new HashSet<GroupData>();
+        List<WebElement> elements = driver.findElements(By.cssSelector("span.group"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            int groupId = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+            GroupData group = new GroupData().withGroupName(name).withId(groupId);
+            groups.add(group);
+        }
+        return groups;
+    }
+
+
 }
