@@ -29,7 +29,7 @@ public class TestGroupDeletion extends TestBase {
         Groups after = app.groups().all();
         Assert.assertEquals(after.size(), before.size() - 1);
 
-        assertThat(after, equalTo(before.withoutGroup(deletedGroup)));
+        assertThat(after, equalTo(before.withoutAdded(deletedGroup)));
     }
 
 }
