@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/addressbook/addressbook.iml" filepath="$PROJECT_DIR$/addressbook/addressbook.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_home-work.iml" filepath="$PROJECT_DIR$/.idea/modules/java_home-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_home_new-work.iml" filepath="$PROJECT_DIR$/.idea/modules/java_home_new-work.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work.iml" filepath="$PROJECT_DIR$/.idea/modules/work.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work_main.iml" filepath="$PROJECT_DIR$/.idea/modules/work_main.iml" group="work" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work_test.iml" filepath="$PROJECT_DIR$/.idea/modules/work_test.iml" group="work" />

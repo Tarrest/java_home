@@ -21,35 +21,6 @@ public class ContactData {
         return mName;
     }
 
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "fName='" + fName + '\'' +
-                ", lName='" + lName + '\'' +
-                ", contactId=" + contactId +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ContactData that = (ContactData) o;
-
-        if (contactId != that.contactId) return false;
-        if (fName != null ? !fName.equals(that.fName) : that.fName != null) return false;
-        return lName != null ? lName.equals(that.lName) : that.lName == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = fName != null ? fName.hashCode() : 0;
-        result = 31 * result + (lName != null ? lName.hashCode() : 0);
-        result = 31 * result + contactId;
-        return result;
-    }
-
     public String getlName() {
 
         return lName;
@@ -131,6 +102,35 @@ public class ContactData {
     public ContactData withIndexGroup(int indexGroup) {
         this.indexGroup = indexGroup;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                ", contactId=" + contactId +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ContactData that = (ContactData) o;
+
+        if (contactId != that.contactId) return false;
+        if (fName != null ? !fName.equals(that.fName) : that.fName != null) return false;
+        return lName != null ? lName.equals(that.lName) : that.lName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = fName != null ? fName.hashCode() : 0;
+        result = 31 * result + (lName != null ? lName.hashCode() : 0);
+        result = 31 * result + contactId;
+        return result;
     }
 
 }

@@ -65,8 +65,8 @@ public class ContactsHelper extends BaseHelper {
         contactList.get(index).click();
     }
 
-    private void selectContactById(int contactId) {
-        driver.findElement(By.cssSelector("input[value='" + contactId + "']")).click();
+    private void selectContactById(int id) {
+        driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
     public void reloadPage() {

@@ -1,27 +1,24 @@
 package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
-import org.testng.Assert;
+import com.chisw.work.addressbook.Data.Groups;
 import org.testng.annotations.Test;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 public class TestGroupCreation extends TestBase {
 
     @Test
     public void checkGroupCreation() {
         app.goTo().groupPage();
-        Set<GroupData> before = app.groups().all();
-        GroupData group = new GroupData().withGroupName("test123").withGroupLogo("yert1234").withGroupComment("gfsh567");
+        Groups  before = app.groups().all();
+        GroupData group = new GroupData().withGroupName("test123");
         app.groups().createNewGroup(group);
-        Set<GroupData> after = app.groups().all();
-        Assert.assertEquals(after.size(),before.size() + 1);
-
-        group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt());
-        before.add(group);
-        Assert.assertEquals(before, after);
+        Groups after = app.groups().all();
+        assertThat(after.size(),equalTo(before.size() + 1));
+        assertThat(after, equalTo(
+                before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
     }
 
 }

@@ -27,15 +27,17 @@ public class TestContactEditing extends TestBase {
 
     @Test
     public void checkContactEditing() {
+
         Set<ContactData> before = app.contacts().all();
         ContactData modifiedContact = before.iterator().next();
-        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("Jo3hn").withLastName("Do3u");
+        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("Modified2").withLastName("Modified2");
         app.contacts().modifyContact(contact);
         Set<ContactData> after = app.contacts().all();
         Assert.assertEquals(before.size(), after.size());
 
         before.remove(modifiedContact);
         before.add(contact);
+
         Assert.assertEquals(before, after);
     }
 
