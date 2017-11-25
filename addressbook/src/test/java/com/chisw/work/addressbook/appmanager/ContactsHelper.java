@@ -9,10 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
 
 public class ContactsHelper extends BaseHelper {
 
@@ -61,11 +59,6 @@ public class ContactsHelper extends BaseHelper {
         return isElementPresent(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
-    public void selectContact(int index) {
-        List<WebElement> contactList = driver.findElements(By.name("selected[]"));
-        contactList.get(index).click();
-    }
-
     private void selectContactById(int id) {
         driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
@@ -81,21 +74,12 @@ public class ContactsHelper extends BaseHelper {
         reloadPage();
     }
 
-
-    public void modifyContact(int index, ContactData contact) {
-        selectContact(index);
-        pressEditContact();
-        fillContactForm(contact, false);
-        submitUpdateContactForm();
-        reloadPage();
-    }
-
-
     public void modifyContact(ContactData contact) {
         selectContactById(contact.getContactId());
         pressEditContact();
         fillContactForm(contact, false);
         submitUpdateContactForm();
+        contactCashe = null;
         reloadPage();
     }
 
@@ -104,6 +88,7 @@ public class ContactsHelper extends BaseHelper {
         clickDeleteContact();
         Alert alert = driver.switchTo().alert();
         alert.accept();
+        contactCashe = null;
         reloadPage();
     }
 
@@ -111,24 +96,19 @@ public class ContactsHelper extends BaseHelper {
         clickCreateNewContact();
         fillContactForm(contact, true);
         submitContactForm();
+        contactCashe = null;
         reloadPage();
     }
 
-    public List<ContactData> list() {
-        List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement> rows = driver.findElements(By.name("entry"));
-        for (WebElement row : rows) {
-            List<WebElement> cells = row.findElements(By.tagName("td"));
-            int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
-            String lastName = cells.get(1).getText();
-            String firstName = cells.get(2).getText();
-            contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName));
-        }
-        return contacts;
-    }
+    private Contacts contactCashe = null;
 
     public Contacts all() {
-        Contacts contacts = new Contacts();
+
+        if (contactCashe != null) {
+            return new Contacts(contactCashe);
+        }
+
+        contactCashe = new Contacts();
         List<WebElement> rows = driver.findElements(By.name("entry"));
         for (WebElement row : rows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
@@ -136,9 +116,9 @@ public class ContactsHelper extends BaseHelper {
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
             ContactData contact = new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName);
-            contacts.add(contact);
+            contactCashe.add(contact);
         }
-        return contacts;
+        return new Contacts(contactCashe);
     }
 
 }

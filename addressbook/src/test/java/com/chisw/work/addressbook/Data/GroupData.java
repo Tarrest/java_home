@@ -25,24 +25,6 @@ public class GroupData {
         return this;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        GroupData groupData = (GroupData) o;
-
-        if (groupId != groupData.groupId) return false;
-        return groupName != null ? groupName.equals(groupData.groupName) : groupData.groupName == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = groupName != null ? groupName.hashCode() : 0;
-        result = 31 * result + groupId;
-        return result;
-    }
-
     public GroupData withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -63,6 +45,24 @@ public class GroupData {
                 "groupName='" + groupName + '\'' +
                 ", groupId='" + groupId + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        GroupData groupData = (GroupData) o;
+
+        if (groupId != groupData.groupId) return false;
+        return groupName != null ? groupName.equals(groupData.groupName) : groupData.groupName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = groupName != null ? groupName.hashCode() : 0;
+        result = 31 * result + groupId;
+        return result;
     }
 
 }
