@@ -2,6 +2,7 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.ContactData;
 import com.chisw.work.addressbook.Data.Contacts;
+import org.hamcrest.MatcherAssert;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -27,9 +28,9 @@ public class TestContactCreation extends TestBase {
         Contacts before = app.contacts().all();
         ContactData contact = new ContactData().withFirstName("Ivan").withLastName("Petrov").withIndexGroup(1);
         app.contacts().createContact(contact);
+        //assertThat(app.contacts().count(), equalTo(before.size() + 1));
         Contacts after = app.contacts().all();
-        Assert.assertEquals(after.size(), before.size()+1);
-
         assertThat(after, equalTo(before.withAdded(contact.withContactId(after.stream().mapToInt((c) -> c.getContactId()).max().getAsInt()))));
+        assertThat(after.size(), equalTo(before.size() + 1));
         }
 }

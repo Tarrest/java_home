@@ -59,6 +59,10 @@ public class ContactsHelper extends BaseHelper {
         return isElementPresent(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
+    public int count() {
+        return  Integer.parseInt(driver.findElement(By.xpath(".//*[@id='search_count']")).getText());
+    }
+
     private void selectContactById(int id) {
         driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
