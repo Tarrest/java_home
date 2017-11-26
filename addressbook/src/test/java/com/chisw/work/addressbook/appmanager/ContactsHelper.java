@@ -9,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 public class ContactsHelper extends BaseHelper {
@@ -125,4 +127,35 @@ public class ContactsHelper extends BaseHelper {
         return new Contacts(contactCashe);
     }
 
+    public Set<ContactData> allNew() {
+        Set<ContactData> contacts = new HashSet<ContactData>();
+        List<WebElement> rows = driver.findElements(By.name("entry"));
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
+            String lastName = cells.get(1).getText();
+            String firstName = cells.get(2).getText();
+            String[] phones = cells.get(5).getText().split("\n");
+            contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName)
+                            .withHomePhone(phones[0]).withhMobPhone(phones[1]).withWorkPhone(phones[2]));
+        }
+        return contacts;
+    }
+
+    public ContactData infoFromEditForm(ContactData contact) {
+      initContactModificationById(contact.getContactId());
+      String firstName = driver.findElement(By.name("firstname")).getAttribute("value");
+      String lastName = driver.findElement(By.name("lastname")).getAttribute("value");
+      String homePhone = driver.findElement(By.name("home")).getAttribute("value");
+      String workPhone = driver.findElement(By.name("work")).getAttribute("value");
+      String mobPhone = driver.findElement(By.name("mobile")).getAttribute("value");
+      driver.navigate().back();
+      return new ContactData().withContactId(contact.getContactId()).withFirstName(firstName)
+              .withLastName(lastName).withHomePhone(homePhone)
+              .withhMobPhone(mobPhone).withWorkPhone(workPhone);
+    }
+
+    private void initContactModificationById(int id) {
+        driver.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    }
 }

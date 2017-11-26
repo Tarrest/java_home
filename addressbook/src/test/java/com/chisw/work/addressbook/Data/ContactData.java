@@ -9,6 +9,8 @@ public class ContactData {
     private String company;
     private String address;
     private String homePhone;
+    private String mobPhone;
+    private String workPhone;
     private int indexGroup;
     private int contactId = Integer.MAX_VALUE;
 
@@ -22,7 +24,6 @@ public class ContactData {
     }
 
     public String getlName() {
-
         return lName;
     }
 
@@ -44,6 +45,14 @@ public class ContactData {
 
     public String getHomePhone() {
         return homePhone;
+    }
+
+    public String getMobPhone() {
+        return mobPhone;
+    }
+
+    public String getWorkPhone() {
+        return workPhone;
     }
 
     public int getIndexGroup() {
@@ -99,6 +108,16 @@ public class ContactData {
         return this;
     }
 
+    public ContactData withhMobPhone(String mobPhone) {
+        this.mobPhone = mobPhone;
+        return this;
+    }
+
+    public ContactData withWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+        return this;
+    }
+
     public ContactData withIndexGroup(int indexGroup) {
         this.indexGroup = indexGroup;
         return this;
@@ -111,14 +130,22 @@ public class ContactData {
 
         ContactData that = (ContactData) o;
 
+        if (contactId != that.contactId) return false;
         if (fName != null ? !fName.equals(that.fName) : that.fName != null) return false;
-        return lName != null ? lName.equals(that.lName) : that.lName == null;
+        if (lName != null ? !lName.equals(that.lName) : that.lName != null) return false;
+        if (homePhone != null ? !homePhone.equals(that.homePhone) : that.homePhone != null) return false;
+        if (mobPhone != null ? !mobPhone.equals(that.mobPhone) : that.mobPhone != null) return false;
+        return workPhone != null ? workPhone.equals(that.workPhone) : that.workPhone == null;
     }
 
     @Override
     public int hashCode() {
         int result = fName != null ? fName.hashCode() : 0;
         result = 31 * result + (lName != null ? lName.hashCode() : 0);
+        result = 31 * result + (homePhone != null ? homePhone.hashCode() : 0);
+        result = 31 * result + (mobPhone != null ? mobPhone.hashCode() : 0);
+        result = 31 * result + (workPhone != null ? workPhone.hashCode() : 0);
+        result = 31 * result + contactId;
         return result;
     }
 
@@ -127,6 +154,9 @@ public class ContactData {
         return "ContactData{" +
                 "fName='" + fName + '\'' +
                 ", lName='" + lName + '\'' +
+                ", homePhone='" + homePhone + '\'' +
+                ", mobPhone='" + mobPhone + '\'' +
+                ", workPhone='" + workPhone + '\'' +
                 ", contactId=" + contactId +
                 '}';
     }
