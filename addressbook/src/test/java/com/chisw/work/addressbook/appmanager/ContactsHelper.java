@@ -137,7 +137,7 @@ public class ContactsHelper extends BaseHelper {
             String firstName = cells.get(2).getText();
             String[] phones = cells.get(5).getText().split("\n");
             contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName)
-                            .withHomePhone(phones[0]).withhMobPhone(phones[1]).withWorkPhone(phones[2]));
+                            .withHomePhone(phones[0]).withMobPhone(phones[1]).withWorkPhone(phones[2]));
         }
         return contacts;
     }
@@ -152,7 +152,7 @@ public class ContactsHelper extends BaseHelper {
       driver.navigate().back();
       return new ContactData().withContactId(contact.getContactId()).withFirstName(firstName)
               .withLastName(lastName).withHomePhone(homePhone)
-              .withhMobPhone(mobPhone).withWorkPhone(workPhone);
+              .withMobPhone(mobPhone).withWorkPhone(workPhone);
     }
 
     private void initContactModificationById(int id) {
