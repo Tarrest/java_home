@@ -11,6 +11,7 @@ public class ContactData {
     private String homePhone;
     private String mobPhone;
     private String workPhone;
+    private String allPhones;
     private int indexGroup;
     private int contactId = Integer.MAX_VALUE;
 
@@ -53,6 +54,10 @@ public class ContactData {
 
     public String getWorkPhone() {
         return workPhone;
+    }
+
+    public String getAllPhones() {
+        return allPhones;
     }
 
     public int getIndexGroup() {
@@ -115,6 +120,11 @@ public class ContactData {
 
     public ContactData withWorkPhone(String workPhone) {
         this.workPhone = workPhone;
+        return this;
+    }
+
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
         return this;
     }
 

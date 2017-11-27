@@ -127,7 +127,7 @@ public class ContactsHelper extends BaseHelper {
         return new Contacts(contactCashe);
     }
 
-    public Set<ContactData> allNew() {
+    public Set<ContactData> allForPhone() {
         Set<ContactData> contacts = new HashSet<ContactData>();
         List<WebElement> rows = driver.findElements(By.name("entry"));
         for (WebElement row : rows) {
@@ -135,9 +135,9 @@ public class ContactsHelper extends BaseHelper {
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
-            String[] phones = cells.get(5).getText().split("\n");
+            String allPhones = cells.get(5).getText();
             contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName)
-                            .withHomePhone(phones[0]).withMobPhone(phones[1]).withWorkPhone(phones[2]));
+                            .withAllPhones(allPhones));
         }
         return contacts;
     }

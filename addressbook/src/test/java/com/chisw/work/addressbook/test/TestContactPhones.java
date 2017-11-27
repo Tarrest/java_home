@@ -5,6 +5,9 @@ import org.hamcrest.CoreMatchers;
 import org.hamcrest.MatcherAssert;
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -13,15 +16,20 @@ public class TestContactPhones extends TestBase {
     @Test
     public void checkContactPhones() {
         app.goTo().homePage();
-        ContactData contact = app.contacts().allNew().iterator().next();
+        ContactData contact = app.contacts().allForPhone().iterator().next();
         ContactData contactInfoFromEditForm = app.contacts().infoFromEditForm(contact);
 
-        assertThat(contact.getHomePhone(), equalTo(cleaned(contactInfoFromEditForm.getHomePhone())));
-        assertThat(contact.getMobPhone(), equalTo(cleaned(contactInfoFromEditForm.getMobPhone())));
-        assertThat(contact.getWorkPhone(), equalTo(cleaned(contactInfoFromEditForm.getWorkPhone())));
+        assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));
     }
 
-    public String cleaned(String phone) {
+    private String mergePhones(ContactData contact) {
+        return Arrays.asList(contact.getHomePhone(), contact.getMobPhone(), contact.getWorkPhone())
+                .stream().filter((s) -> ! s.equals(""))
+                .map(TestContactPhones :: cleaned)
+                .collect(Collectors.joining("\n"));
+    }
+
+    public static String cleaned(String phone) {
         return  phone.replaceAll("\\s", "").replaceAll("[-()]", "");
     }
 
