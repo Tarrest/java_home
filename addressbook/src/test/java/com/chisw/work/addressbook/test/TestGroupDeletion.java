@@ -2,12 +2,8 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
 import com.chisw.work.addressbook.Data.Groups;
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
