@@ -12,7 +12,7 @@ public class TestContactPhones extends TestBase {
     @Test
     public void checkContactPhones() {
         app.goTo().homePage();
-        ContactData contact = app.contacts().allForPhone().iterator().next();
+        ContactData contact = app.contacts().allFromHomePage().iterator().next();
         ContactData contactInfoFromEditForm = app.contacts().infoFromEditForm(contact);
 
         assertThat(contact.getAllPhones(), equalTo(mergePhones(contactInfoFromEditForm)));

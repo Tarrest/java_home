@@ -126,7 +126,7 @@ public class ContactsHelper extends BaseHelper {
         return new Contacts(contactCashe);
     }
 
-    public Set<ContactData> allForPhone() {
+    public Set<ContactData> allFromHomePage() {
         Set<ContactData> contacts = new HashSet<ContactData>();
         List<WebElement> rows = driver.findElements(By.name("entry"));
         for (WebElement row : rows) {
@@ -134,9 +134,11 @@ public class ContactsHelper extends BaseHelper {
             int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("value"));
             String lastName = cells.get(1).getText();
             String firstName = cells.get(2).getText();
+            String address = cells.get(3).getText();
             String allPhones = cells.get(5).getText();
+            String allEmails = cells.get(4).getText();
             contacts.add(new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName)
-                            .withAllPhones(allPhones));
+                            .withAddress(address).withAllPhones(allPhones).withAllEmails(allEmails));
         }
         return contacts;
     }
@@ -148,13 +150,27 @@ public class ContactsHelper extends BaseHelper {
       String homePhone = driver.findElement(By.name("home")).getAttribute("value");
       String workPhone = driver.findElement(By.name("work")).getAttribute("value");
       String mobPhone = driver.findElement(By.name("mobile")).getAttribute("value");
+      String email = driver.findElement(By.name("email")).getAttribute("value");
+      String email2 = driver.findElement(By.name("email2")).getAttribute("value");
+      String email3 = driver.findElement(By.name("email3")).getAttribute("value");
       driver.navigate().back();
       return new ContactData().withContactId(contact.getContactId()).withFirstName(firstName)
               .withLastName(lastName).withHomePhone(homePhone)
-              .withMobPhone(mobPhone).withWorkPhone(workPhone);
+              .withMobPhone(mobPhone).withWorkPhone(workPhone)
+              .withEmail(email).withEmail2(email2).withEmail3(email3);
     }
 
     private void initContactModificationById(int id) {
         driver.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+    }
+
+    public ContactData infoFromDetails(ContactData contact) {
+        initDetailsById(contact.getContactId());
+        String allName = driver.findElement(By.xpath(".//*[@id='content']/b")).getText();
+        return null;
+    }
+
+    private void initDetailsById(int id) {
+        driver.findElement(By.cssSelector(String.format("a[href='view.php?id=%s']", id))).click();
     }
 }
