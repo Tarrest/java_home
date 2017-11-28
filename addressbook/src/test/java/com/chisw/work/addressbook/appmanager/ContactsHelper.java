@@ -166,8 +166,10 @@ public class ContactsHelper extends BaseHelper {
 
     public ContactData infoFromDetails(ContactData contact) {
         initDetailsById(contact.getContactId());
-        String allName = driver.findElement(By.xpath(".//*[@id='content']/b")).getText();
-        return null;
+        String fullName = driver.findElement(By.xpath(".//*[@id='content']/b")).getText();
+        //String address = driver.findElement(By.linkText(contact.getAddress())).getText();
+        driver.navigate().back();
+        return new ContactData().withFullName(fullName);
     }
 
     private void initDetailsById(int id) {

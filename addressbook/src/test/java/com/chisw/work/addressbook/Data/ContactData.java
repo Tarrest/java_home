@@ -4,6 +4,7 @@ public class ContactData {
     private String fName;
     private String mName;
     private String lName;
+    private String fullName;
     private String nick;
     private String title;
     private String company;
@@ -20,6 +21,7 @@ public class ContactData {
     private int contactId = Integer.MAX_VALUE;
 
 
+
     public String getfName() {
         return fName;
     }
@@ -30,6 +32,10 @@ public class ContactData {
 
     public String getlName() {
         return lName;
+    }
+
+    public String getFullName() {
+        return fullName;
     }
 
     public String getNick() {
@@ -105,6 +111,11 @@ public class ContactData {
 
     public ContactData withLastName(String lName) {
         this.lName = lName;
+        return this;
+    }
+
+    public ContactData withFullName(String fullName) {
+        this.fullName = fullName;
         return this;
     }
 
