@@ -40,6 +40,7 @@ public class ContactsHelper extends BaseHelper {
         type(By.name("company"), contactData.getCompany());
         type(By.name("address"), contactData.getAddress());
         type(By.name("home"), contactData.getHomePhone());
+        attach(By.name("photo"), contactData.getPhoto());
 
         if (creation) {
             new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getIndexGroup());

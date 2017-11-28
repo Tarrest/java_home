@@ -1,5 +1,7 @@
 package com.chisw.work.addressbook.Data;
 
+import java.io.File;
+
 public class ContactData {
     private String fName;
     private String mName;
@@ -19,6 +21,7 @@ public class ContactData {
     private String allEmails;
     private int indexGroup;
     private int contactId = Integer.MAX_VALUE;
+    private File photo;
 
 
 
@@ -92,6 +95,10 @@ public class ContactData {
 
     public int getContactId() {
         return contactId;
+    }
+
+    public File getPhoto() {
+        return photo;
     }
 
     public ContactData withContactId(int contactId) {
@@ -181,6 +188,11 @@ public class ContactData {
 
     public ContactData withIndexGroup(int indexGroup) {
         this.indexGroup = indexGroup;
+        return this;
+    }
+
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
         return this;
     }
 
