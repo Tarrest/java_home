@@ -28,12 +28,32 @@ public class TestContactEditing extends TestBase {
 
         Contacts before = app.contacts().all();
         ContactData modifiedContact = before.iterator().next();
-        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("Modified2").withLastName("Modified2");
+        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("8Modified3").withLastName("8Modified3");
         app.contacts().modifyContact(contact);
         Contacts after = app.contacts().all();
-        //Assert.assertEquals(before.size(), after.size());
-
-        assertThat(after, equalTo(before.withAdded(modifiedContact)));
+        assertThat(after, equalTo(before.withoutAdded(modifiedContact).withAdded(contact)));
     }
 
+    /*
+        @Test
+        public void checkContactEditing() {
+
+        List<ContactData> before = app.contacts().list();
+        int index = 0;
+        ContactData contact = new ContactData().withContactId(before.get(index).getContactId()).withLastName("Rose").withFirstName("Axl  eqwrqwer 1");
+        app.contacts().modifyContact(index, contact);
+        List<ContactData> after = app.contacts().list();
+        Assert.assertEquals(before.size(), after.size());
+
+        before.remove(index);
+        before.add(contact);
+
+        Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getContactId(), c2.getContactId());
+        before.sort(byId);
+        after.sort(byId);
+
+        Assert.assertEquals(before, after);
+
+    }
+    */
 }
