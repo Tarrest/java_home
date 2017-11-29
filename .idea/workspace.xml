@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/work_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/work_main.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/work_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/work_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/build.gradle" afterPath="$PROJECT_DIR$/addressbook/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/addressbook/.gradle/" />
     <ignored path="$PROJECT_DIR$/addressbook/build/" />
@@ -80,7 +83,41 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupDataGenerator.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1589#1600#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groups.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/groups.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -438,8 +475,8 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/addressbook" value="4534857001960" />
-        <entry key="$PROJECT_DIR$/addressbook/build.gradle" value="592783398" />
+        <entry key="$PROJECT_DIR$/addressbook" value="4535219108013" />
+        <entry key="$PROJECT_DIR$/addressbook/build.gradle" value="3482284334" />
         <entry key="$PROJECT_DIR$/addressbook/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/sandbox" value="4534856665609" />
       </map>
@@ -781,7 +818,6 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/Groups.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/Contacts.java" />
-        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/GroupData.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactEditing.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDeletion.java" />
@@ -798,6 +834,7 @@
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java" />
+        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
       </list>
     </option>
@@ -944,7 +981,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.chisw.work.addressbook.Generator.GroupDataGenerator" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="10 src/test/resources/groups.csv" />
+      <option name="PROGRAM_PARAMETERS" value="-c 15 -f src/test/resources/groups.csv" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/addressbook" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1259,7 +1296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511907173942</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Создан генератор тестовых данных и реализована запись этих данных в файл">
+      <created>1511980873442</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1511980873442</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1305,6 +1349,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1319,7 +1364,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26007327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1407,7 +1452,8 @@
     <MESSAGE value="Украшательства" />
     <MESSAGE value="Добавлена проверка имени на Details" />
     <MESSAGE value="Прописан относительный путь для img и добавлен аватар к контакту" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прописан относительный путь для img и добавлен аватар к контакту" />
+    <MESSAGE value="Создан генератор тестовых данных и реализована запись этих данных в файл" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создан генератор тестовых данных и реализована запись этих данных в файл" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1567,13 +1613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="80" lean-forward="false" selection-start-line="14" selection-start-column="80" selection-end-line="14" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_152/src.zip!/java/util/function/ToIntFunction.java" />
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDeletion.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1670,11 +1709,11 @@
         <state relative-caret-position="1122">
           <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="e#2225#2226#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2322#2323#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2163#2164#0" expanded="false" />
+            <element signature="e#2225#2226#0" expanded="false" />
+            <element signature="e#2250#2251#0" expanded="false" />
+            <element signature="e#2322#2323#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1694,9 +1733,9 @@
         <state relative-caret-position="527">
           <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1061#1062#0" expanded="false" />
+            <element signature="e#1136#1137#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1736,7 +1775,7 @@
         <state relative-caret-position="459">
           <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1754,7 +1793,7 @@
         <state relative-caret-position="578">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1769,14 +1808,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
+    <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1035#1046#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="39" lean-forward="false" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1785,6 +1821,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="29" column="19" lean-forward="true" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1589#1600#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
