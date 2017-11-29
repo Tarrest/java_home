@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="Добавлена проверка имени на Details">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addressbook/src/test/resources/image.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/Data/ContactData.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/Data/ContactData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/BaseHelper.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/BaseHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/ContactsHelper.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/ContactsHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestContactCreation.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestContactCreation.class" />
+    <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/ContactData.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/ContactData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDetails.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDetails.java" />
     </list>
     <ignored path="$PROJECT_DIR$/addressbook/.gradle/" />
     <ignored path="$PROJECT_DIR$/addressbook/build/" />
@@ -89,120 +80,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ContactsHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContactDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="43" lean-forward="false" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContactPhones.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactPhones.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContactEmails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactEmails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="60" lean-forward="false" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/ContactData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContactEditing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactEditing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestContactCreation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="93" lean-forward="false" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupsHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/GroupsHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-                <element signature="e#2225#2226#0" expanded="true" />
-                <element signature="e#2250#2251#0" expanded="true" />
-                <element signature="e#2322#2323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -920,6 +798,7 @@
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java" />
+        <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
       </list>
     </option>
   </component>
@@ -945,7 +824,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1004,6 +883,15 @@
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="addressbook" type="462c0819:PsiDirectoryNode" />
+              <item name="Generator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="work" type="b2602c69:ProjectViewProjectNode" />
+              <item name="addressbook" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="addressbook" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1021,9 +909,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1046,7 +934,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.TestContactCreation.checkContactCreation">
+  <component name="RunManager" selected="Application.GroupDataGenerator">
+    <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.chisw.work.addressbook.Generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.chisw.work.addressbook.Generator.GroupDataGenerator" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="10 src/test/resources/groups.csv" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/addressbook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="work_test" />
+      <envs />
+    </configuration>
     <configuration name="TestContactCreation" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1175,38 +1082,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="TestContactEmails.checkContactEmails" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.chisw.work.addressbook.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="work_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.chisw.work.addressbook.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chisw.work.addressbook.test.TestContactEmails" />
-      <option name="METHOD_NAME" value="checkContactEmails" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/addressbook" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -1301,19 +1176,19 @@
       <listeners />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.TestContactCreation.checkContactCreation" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.TestContactEmails.checkContactEmails" />
+      <item index="0" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.TestContactCreation.checkContactCreation" />
       <item index="2" class="java.lang.String" itemvalue="TestNG.TestContactDetails.checkContactDetails" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.TestContactCreation.testCurrentDir" />
       <item index="4" class="java.lang.String" itemvalue="TestNG.TestContactCreation" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.TestContactCreation.checkContactCreation" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.TestContactCreation" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.TestContactCreation.testCurrentDir" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.TestContactDetails.checkContactDetails" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.TestContactEmails.checkContactEmails" />
+        <item index="0" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.TestContactCreation.checkContactCreation" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.TestContactCreation" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.TestContactCreation.testCurrentDir" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.TestContactDetails.checkContactDetails" />
       </list>
     </recent_temporary>
   </component>
@@ -1377,13 +1252,17 @@
       <option name="project" value="LOCAL" />
       <updated>1511861236134</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Прописан относительный путь для img и добавлен аватар к контакту">
+      <created>1511907173940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1511907173942</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestContactCreation - 2017.11.29 at 00h 04m 17s.xml">
-      <configuration name="TestContactCreation" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestContactCreation_checkContactCreation - 2017.11.28 at 23h 52m 25s.xml">
       <configuration name="TestContactCreation.checkContactCreation" configurationId="TestNG" />
     </history-entry>
@@ -1394,6 +1273,9 @@
       <configuration name="TestContactCreation.checkContactCreation" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestContactCreation_checkContactCreation - 2017.11.29 at 00h 05m 34s.xml">
+      <configuration name="TestContactCreation.checkContactCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestContactCreation_checkContactCreation - 2017.11.29 at 19h 58m 48s.xml">
       <configuration name="TestContactCreation.checkContactCreation" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestContactCreation_testCurrentDir - 2017.11.28 at 23h 45m 00s.xml">
@@ -1430,10 +1312,10 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2410148" sideWeight="0.51145834" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2410148" sideWeight="0.51354164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2410148" sideWeight="0.48854166" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3778027" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38266385" sideWeight="0.48645833" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1443,8 +1325,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40803382" sideWeight="0.49166667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40803382" sideWeight="0.49166667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1524,7 +1406,8 @@
     <MESSAGE value="Изменения в контактДата" />
     <MESSAGE value="Украшательства" />
     <MESSAGE value="Добавлена проверка имени на Details" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена проверка имени на Details" />
+    <MESSAGE value="Прописан относительный путь для img и добавлен аватар к контакту" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прописан относительный путь для img и добавлен аватар к контакту" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1541,24 +1424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupDeletion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupEditing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/GroupsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1739,7 +1604,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="94" lean-forward="false" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1759,7 +1624,7 @@
         <state relative-caret-position="391">
           <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1785,7 +1650,7 @@
         <state relative-caret-position="153">
           <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1795,7 +1660,7 @@
         <state relative-caret-position="153">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1819,7 +1684,7 @@
         <state relative-caret-position="221">
           <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1868,7 +1733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="459">
           <caret line="29" column="75" lean-forward="false" selection-start-line="29" selection-start-column="75" selection-end-line="29" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1878,7 +1743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/ContactData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="1071">
           <caret line="99" column="20" lean-forward="false" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
           <folding />
         </state>
@@ -1886,7 +1751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="578">
           <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1896,11 +1761,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="93" lean-forward="false" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="93" />
+        <state relative-caret-position="408">
+          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="48" lean-forward="false" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1035#1046#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/groups.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
