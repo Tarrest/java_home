@@ -16,7 +16,6 @@ public class TestContactDetails extends TestBase {
         app.goTo().homePage();
         ContactData contact = app.contacts().allFromHomePage().iterator().next();
         ContactData contactDataFromDetails = app.contacts().infoFromDetails(contact);
-
         assertThat(contact.getfName() + " " + contact.getlName(), equalTo(contactDataFromDetails.getFullName()));
         assertThat(contact.getAllEmails(), equalTo(mergedEmails(contactDataFromDetails)));
     }
@@ -26,5 +25,7 @@ public class TestContactDetails extends TestBase {
                 .stream().filter((s) -> ! s.equals(""))
                 .collect(Collectors.joining("\n"));
     }
+
+
 
 }
