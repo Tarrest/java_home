@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/ContactsHelper.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/appmanager/ContactsHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestContactEditing.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestContactEditing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestGroupCreation.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestGroupCreation.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDetails.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactDetails.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupCreation.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupCreation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/addressbook/.gradle/" />
@@ -98,7 +95,7 @@
       <file leaf-file-name="GroupDataGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="238">
               <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -110,8 +107,8 @@
       <file leaf-file-name="groups.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/groups.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -121,12 +118,19 @@
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupCreation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="123" lean-forward="false" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="123" />
+              <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#545#555#0" expanded="true" />
+                <element signature="e#582#592#0" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.jpg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/image.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -886,9 +890,10 @@
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactCreation.java" />
         <option value="$PROJECT_DIR$/addressbook/build.gradle" />
-        <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ContactsHelper.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestContactEditing.java" />
+        <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java" />
+        <option value="$PROJECT_DIR$/addressbook/src/test/resources/groups.csv" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupCreation.java" />
       </list>
     </option>
@@ -1357,19 +1362,17 @@
       <option name="project" value="LOCAL" />
       <updated>1511980873442</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Выполнена параметризация тестового метода создания группы через @DataProvider">
+      <created>1512063802961</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1512063802961</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestContactEditing_checkContactEditing - 2017.11.29 at 23h 09m 31s.xml">
-      <configuration name="TestContactEditing.checkContactEditing" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestContactEditing_checkContactEditing - 2017.11.29 at 23h 24m 40s.xml">
-      <configuration name="TestContactEditing.checkContactEditing" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="TestContactEditing_checkContactEditing - 2017.11.29 at 23h 25m 09s.xml">
-      <configuration name="TestContactEditing.checkContactEditing" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="TestContactEditing_checkContactEditing - 2017.11.29 at 23h 25m 35s.xml">
       <configuration name="TestContactEditing.checkContactEditing" configurationId="TestNG" />
     </history-entry>
@@ -1386,6 +1389,15 @@
       <configuration name="TestGroupCreation" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestGroupCreation - 2017.11.30 at 19h 42m 20s.xml">
+      <configuration name="TestGroupCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGroupCreation - 2017.11.30 at 20h 01m 32s.xml">
+      <configuration name="TestGroupCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGroupCreation - 2017.11.30 at 20h 01m 55s.xml">
+      <configuration name="TestGroupCreation" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestGroupCreation - 2017.11.30 at 20h 02m 47s.xml">
       <configuration name="TestGroupCreation" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestGroupCreation_checkGroupCreation - 2017.11.30 at 19h 36m 51s.xml">
@@ -1507,7 +1519,8 @@
     <MESSAGE value="Добавлена проверка имени на Details" />
     <MESSAGE value="Прописан относительный путь для img и добавлен аватар к контакту" />
     <MESSAGE value="Создан генератор тестовых данных и реализована запись этих данных в файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создан генератор тестовых данных и реализована запись этих данных в файл" />
+    <MESSAGE value="Выполнена параметризация тестового метода создания группы через @DataProvider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Выполнена параметризация тестового метода создания группы через @DataProvider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1530,13 +1543,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/GroupsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="55" column="65" lean-forward="false" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/BaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1851,9 +1857,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/image.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/groups.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Generator/GroupDataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="238">
           <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1861,21 +1880,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/groups.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestGroupCreation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="123" lean-forward="false" selection-start-line="20" selection-start-column="123" selection-end-line="20" selection-end-column="123" />
+          <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#545#555#0" expanded="true" />
+            <element signature="e#582#592#0" expanded="true" />
           </folding>
         </state>
       </provider>
