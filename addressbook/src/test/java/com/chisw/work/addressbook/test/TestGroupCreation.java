@@ -16,7 +16,7 @@ import static org.hamcrest.MatcherAssert.*;
 public class TestGroupCreation extends TestBase {
 
     @DataProvider
-    public Iterator<Object[]> valigGroups() throws IOException {
+    public Iterator<Object[]> validGroups() throws IOException {
         List<Object[]> list = new ArrayList<Object[]>();
         BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.csv")));
         String line = reader.readLine();
@@ -29,7 +29,7 @@ public class TestGroupCreation extends TestBase {
     }
 
 
-    @Test(dataProvider = "valigGroups")
+    @Test(dataProvider = "validGroups")
     public void checkGroupCreation(GroupData group) {
         app.goTo().groupPage();
         Groups  before = app.groups().all();
