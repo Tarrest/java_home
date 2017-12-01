@@ -2,6 +2,7 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.GroupData;
 import com.chisw.work.addressbook.Data.Groups;
+import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
@@ -17,15 +19,19 @@ public class TestGroupCreation extends TestBase {
 
     @DataProvider
     public Iterator<Object[]> validGroups() throws IOException {
-        List<Object[]> list = new ArrayList<Object[]>();
-        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.csv")));
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.xml")));
+        String xml = "";
         String line = reader.readLine();
         while (line != null) {
-            String[] split = line.split(";");
-            list.add(new Object[] {new GroupData().withGroupName(split[0]).withGroupComment(split[1]).withGroupLogo(split[2])});
+/*            String[] split = line.split(";");
+            list.add(new Object[] {new GroupData().withGroupName(split[0]).withGroupComment(split[1]).withGroupLogo(split[2])});*/
+            xml += line;
             line = reader.readLine();
         }
-        return list.iterator();
+        XStream xStream = new XStream();
+        xStream.processAnnotations(GroupData.class);
+        List<GroupData> groups = (List<GroupData>) xStream.fromXML(xml);
+        return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
     }
 
 

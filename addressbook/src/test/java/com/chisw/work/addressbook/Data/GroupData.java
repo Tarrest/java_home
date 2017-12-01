@@ -1,11 +1,15 @@
 package com.chisw.work.addressbook.Data;
 
-public class GroupData {
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
+@XStreamAlias("group")
+public class GroupData {
+    @XStreamOmitField
+    private int groupId = Integer.MAX_VALUE;
     private String groupName;
     private String groupLogo;
     private String groupComment;
-    private int groupId = Integer.MAX_VALUE;;
 
     public int getId() {
         return groupId;
