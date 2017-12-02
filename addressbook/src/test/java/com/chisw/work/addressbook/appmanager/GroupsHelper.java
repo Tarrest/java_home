@@ -105,4 +105,11 @@ public class GroupsHelper extends BaseHelper{
     }
 
 
+    public void deleteAll() {
+        List <WebElement> elements = driver.findElements(By.name("selected[]"));
+        for (WebElement el : elements) {
+            el.click();
+        }
+        clickDeleteGroup();
+    }
 }
