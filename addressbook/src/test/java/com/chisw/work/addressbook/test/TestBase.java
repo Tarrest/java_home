@@ -7,7 +7,8 @@ import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-    protected final static ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+    protected final static ApplicationManager app
+            = new ApplicationManager(System.getProperty("browser", BrowserType.FIREFOX));
 
     @BeforeSuite
     public void setUp() throws Exception {
