@@ -2,6 +2,9 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.ContactData;
 import com.chisw.work.addressbook.Data.Contacts;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -21,7 +25,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class TestContactCreation extends TestBase {
 
     @DataProvider
-    public Iterator<Object[]> validContacts() throws IOException {
+    public Iterator<Object[]> validContactsCsv() throws IOException {
         List<Object[]> list = new ArrayList<Object[]>();
         BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.csv")));
         String line = reader.readLine();
@@ -33,6 +37,38 @@ public class TestContactCreation extends TestBase {
         return list.iterator();
     }
 
+    @DataProvider
+    public Iterator<Object[]> validContactsFromXml() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))) {
+            String xml = "";
+            String line = reader.readLine();
+            while (line != null) {
+                xml += line;
+                line = reader.readLine();
+            }
+            XStream xStream = new XStream();
+            xStream.processAnnotations(ContactData.class);
+            List<ContactData> contacts = (List<ContactData>) xStream.fromXML(xml);
+            return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validContactsFromJson() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+
+            Gson gson = new Gson();
+            List<ContactData> contacts = gson.fromJson(json, new TypeToken<List<ContactData>>(){}.getType());
+            return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+        }
+    }
+
 
     @BeforeMethod
     public void checkPreconditions() {
@@ -42,29 +78,19 @@ public class TestContactCreation extends TestBase {
         }
     }
 
+/*      File photo = new File("src/test/resources/image.jpg");
+        System.out.println(photo.exists());
+        ContactData contact = new ContactData().withFirstName("Ivan").withLastName("Petrov").withPhoto(photo);
+*/
 
-    @Test(dataProvider = "validContacts")
-    public void checkContactCreation(ContactData contact) {
+    @Test(dataProvider = "validContactsFromJson")
+    public void checkGroupCreation(ContactData contact) {
         app.goTo().homePage();
         Contacts before = app.contacts().all();
-        //File photo = new File("src/test/resources/image.jpg");
-        //System.out.println(photo.exists());
-        //ContactData contact = new ContactData().withFirstName("Ivan").withLastName("Petrov").withPhoto(photo);
-        assertThat(app.contacts().count(),equalTo(before.size() + 1));
         app.contacts().createContact(contact);
+        assertThat(app.contacts().count(),equalTo(before.size() + 1));
         Contacts after = app.contacts().all();
-        assertThat(after, equalTo(before.withAdded(contact.withContactId(after.stream().mapToInt((c) -> c.getContactId()).max().getAsInt()))));
-        }
-
-    /*
-    @Test(dataProvider = "validGroups")
-    public void checkGroupCreation(GroupData group) {
-        app.goTo().groupPage();
-        Groups  before = app.groups().all();
-        app.groups().createNewGroup(group);
-        assertThat(app.groups().count(),equalTo(before.size() + 1));
-        Groups after = app.groups().all();
         assertThat(after, equalTo(
-                before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
-    }*/
+                before.withAdded(contact.withContactId(after.stream().mapToInt((c) -> c.getContactId()).max().getAsInt()))));
+    }
 }

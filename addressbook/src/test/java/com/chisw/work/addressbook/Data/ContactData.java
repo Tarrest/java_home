@@ -1,29 +1,43 @@
 package com.chisw.work.addressbook.Data;
 
+import com.google.gson.annotations.Expose;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamOmitField;
+
 import java.io.File;
 
+@XStreamAlias("contact")
 public class ContactData {
+    @Expose
     private String fName;
     private String mName;
+    @Expose
     private String lName;
     private String fullName;
     private String nick;
     private String title;
     private String company;
+    @Expose
     private String address;
+    @Expose
     private String homePhone;
+    @Expose
     private String mobPhone;
+    @Expose
     private String workPhone;
     private String allPhones;
+    @Expose
     private String email;
+    @Expose
     private String email2;
+    @Expose
     private String email3;
     private String allEmails;
+    @XStreamOmitField
     private int indexGroup;
+    @XStreamOmitField
     private int contactId = Integer.MAX_VALUE;
     private File photo;
-
-
 
     public String getfName() {
         return fName;
