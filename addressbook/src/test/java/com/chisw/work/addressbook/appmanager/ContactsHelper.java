@@ -23,15 +23,15 @@ public class ContactsHelper extends BaseHelper {
         click(By.linkText("ADD_NEW"));
     }
 
-    public void submitContactForm() {
+    private void submitContactForm() {
         click(By.name("submit"));
     }
 
-    public void submitUpdateContactForm() {
+    private void submitUpdateContactForm() {
         click(By.name("update"));
     }
 
-    public void fillContactForm(ContactData contactData, boolean creation) {
+    private void fillContactForm(ContactData contactData, boolean creation) {
         type(By.name("firstname"), contactData.getfName());
         type(By.name("middlename"), contactData.getmName());
         type(By.name("lastname"), contactData.getlName());
@@ -54,12 +54,8 @@ public class ContactsHelper extends BaseHelper {
         }
     }
 
-    public void clickDeleteContact() {
+    private void clickDeleteContact() {
         click(By.xpath(".//*[@id='content']/form[2]/div[2]/input"));
-    }
-
-    public void pressEditContact() {
-        click(By.xpath(".//*[@id='maintable']/tbody/tr[2]/td[8]"));
     }
 
     public boolean isContactCreared() {
@@ -74,7 +70,7 @@ public class ContactsHelper extends BaseHelper {
         driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
-    public void reloadPage() {
+    private void reloadPage() {
         click(By.linkText("HOME"));
     }
 
@@ -85,11 +81,11 @@ public class ContactsHelper extends BaseHelper {
         reloadPage();
     }
 
-    public void modifyContact(ContactData contact) {
-        initContactModificationById(contact.getContactId());
+    public void modifyContact(int id, ContactData contact) {
+        initContactModificationById(id);
         fillContactForm(contact, false);
         submitUpdateContactForm();
-        contactCashe = null;
+        contactCache = null;
         reloadPage();
     }
 
@@ -98,7 +94,7 @@ public class ContactsHelper extends BaseHelper {
         clickDeleteContact();
         Alert alert = driver.switchTo().alert();
         alert.accept();
-        contactCashe = null;
+        contactCache = null;
         reloadPage();
     }
 
@@ -106,19 +102,19 @@ public class ContactsHelper extends BaseHelper {
         clickCreateNewContact();
         fillContactForm(contact, true);
         submitContactForm();
-        contactCashe = null;
+        contactCache = null;
         reloadPage();
     }
 
-    private Contacts contactCashe = null;
+    private Contacts contactCache = null;
 
     public Contacts all() {
 
-        if (contactCashe != null) {
-            return new Contacts(contactCashe);
+        if (contactCache != null) {
+            return new Contacts(contactCache);
         }
 
-        contactCashe = new Contacts();
+        contactCache = new Contacts();
         List<WebElement> rows = driver.findElements(By.name("entry"));
         for (WebElement row : rows) {
             List<WebElement> cells = row.findElements(By.tagName("td"));
@@ -127,9 +123,9 @@ public class ContactsHelper extends BaseHelper {
             String firstName = cells.get(2).getText();
             String address = cells.get(3).getText();
             ContactData contact = new ContactData().withContactId(id).withFirstName(firstName).withLastName(lastName).withAddress(address);
-            contactCashe.add(contact);
+            contactCache.add(contact);
         }
-        return new Contacts(contactCashe);
+        return new Contacts(contactCache);
     }
 
     public Set<ContactData> allFromHomePage() {
@@ -167,7 +163,8 @@ public class ContactsHelper extends BaseHelper {
     }
 
     private void initContactModificationById(int id) {
-        driver.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+        //driver.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+        driver.findElement(By.xpath(".//a[@href=\"edit.php?id=" + id + "\"]/img")).click();
     }
 
     public ContactData infoFromDetails(ContactData contact) {

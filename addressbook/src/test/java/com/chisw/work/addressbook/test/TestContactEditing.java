@@ -25,11 +25,10 @@ public class TestContactEditing extends TestBase {
 
     @Test
     public void checkContactEditing() {
-
         Contacts before = app.contacts().all();
         ContactData modifiedContact = before.iterator().next();
-        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("8Modified3").withLastName("8Modified3");
-        app.contacts().modifyContact(contact);
+        ContactData contact = new ContactData().withContactId(modifiedContact.getContactId()).withFirstName("Modified3").withLastName("Modified3");
+        app.contacts().modifyContact(modifiedContact.getContactId(), contact);
         Contacts after = app.contacts().all();
         assertThat(after, equalTo(before.withoutAdded(modifiedContact).withAdded(contact)));
     }

@@ -12,37 +12,37 @@ public class GroupsHelper extends BaseHelper{
         super(driver);
     }
 
-    public void clickCreateNewGroup() {
+    private void clickCreateNewGroup() {
         click(By.name("new"));
     }
 
-    public void fillGroupForm(GroupData groupData) {
+    private void fillGroupForm(GroupData groupData) {
         type(By.name("group_name"), groupData.getGroupName());
         type(By.name("group_header"), groupData.getGroupLogo());
         type(By.name("group_footer"), groupData.getGroupComment());
     }
 
-    public void submitGroupCreation() {
+    private void submitGroupCreation() {
         click(By.name("submit"));
     }
 
-    public void selectCreatedGroupById(int id) {
+    private void selectCreatedGroupById(int id) {
         driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
-    public void reloadGroupPage() {
+    private void reloadGroupPage() {
         click(By.linkText("GROUPS"));
     }
 
-    public void clickDeleteGroup() {
+    private void clickDeleteGroup() {
         click(By.name("delete"));
     }
 
-    public void editGroup() {
+    private void editGroup() {
         click(By.name("edit"));
     }
 
-    public void updateGroup() {
+    private void updateGroup() {
         click(By.name("update"));
     }
 
