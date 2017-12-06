@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="hibernate config is done">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/work_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/work_main.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/work_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/work_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/build.gradle" afterPath="$PROJECT_DIR$/addressbook/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/addressbook/.gradle/" />
     <ignored path="$PROJECT_DIR$/addressbook/build/" />
@@ -27,13 +27,13 @@
     <SUITE FILE_PATH="coverage/work$TestContactEditing_checkContactEditing.coverage" NAME="TestContactEditing.checkContactEditing Coverage Results" MODIFIED="1511508542827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.chisw.work.addressbook.test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/work$TestGroupCreation_checkGroupCreation.coverage" NAME="TestGroupCreation.checkGroupCreation Coverage Results" MODIFIED="1506549974228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/work$com_chisw_work_addressbook_test_in_work_test.coverage" NAME="com.chisw.work.addressbook.test in work_test Coverage Results" MODIFIED="1506605184982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.chisw.work.addressbook.test.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/work$TestGroupEditing_checkGroupEditing.coverage" NAME="TestGroupEditing.checkGroupEditing Coverage Results" MODIFIED="1509397689903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.chisw.work.addressbook.test.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/work$com_chisw_work_addressbook_test_in_work_test.coverage" NAME="com.chisw.work.addressbook.test in work_test Coverage Results" MODIFIED="1506605184982" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/work$TestGroupCreation_checkGroupCreation.coverage" NAME="TestGroupCreation.checkGroupCreation Coverage Results" MODIFIED="1506549974228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.chisw.work.addressbook.test.*</FILTER>
     </SUITE>
   </component>
@@ -88,8 +88,8 @@
       <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="221">
+              <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
       <file leaf-file-name="HbConnectionTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+            <state relative-caret-position="378">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +107,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DbConnectionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/DbConnectionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="121" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="50" lean-forward="true" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="55">
+              <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -141,8 +151,8 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$/addressbook" value="C:\Users\user\.gradle\wrapper\dists\gradle-3.5-rc-2-all\c0k4lbl8pjtnoeqme5ekch4re\gradle-3.5-rc-2" />
-        <entry key="$PROJECT_DIR$/sandbox" value="C:\Users\user\.gradle\wrapper\dists\gradle-3.5-rc-2-all\c0k4lbl8pjtnoeqme5ekch4re\gradle-3.5-rc-2" />
+        <entry key="$PROJECT_DIR$/addressbook" value="C:\Users\Roman\.gradle\wrapper\dists\gradle-3.5-rc-2-all\c0k4lbl8pjtnoeqme5ekch4re\gradle-3.5-rc-2" />
+        <entry key="$PROJECT_DIR$/sandbox" value="C:\Users\Roman\.gradle\wrapper\dists\gradle-3.5-rc-2-all\c0k4lbl8pjtnoeqme5ekch4re\gradle-3.5-rc-2" />
       </map>
     </option>
     <option name="myGradleVersions">
@@ -483,11 +493,11 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/addressbook" value="4536153960678" />
-        <entry key="$PROJECT_DIR$/addressbook/build.gradle" value="834983735" />
+        <entry key="$PROJECT_DIR$/addressbook" value="4537606017712" />
+        <entry key="$PROJECT_DIR$/addressbook/build.gradle" value="2378908799" />
         <entry key="$PROJECT_DIR$/addressbook/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/addressbook/settings.gradle" value="3479446895" />
-        <entry key="$PROJECT_DIR$/sandbox" value="4535395829792" />
+        <entry key="$PROJECT_DIR$/sandbox" value="4537526330013" />
         <entry key="$PROJECT_DIR$/sandbox/build.gradle" value="4112937623" />
         <entry key="$PROJECT_DIR$/sandbox/gradle/wrapper/gradle-wrapper.properties" value="615277776" />
         <entry key="$PROJECT_DIR$/sandbox/settings.gradle" value="3479446895" />
@@ -857,18 +867,18 @@
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/DbConnectionTest.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/DbConnectionGroupTest.java" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/DbConnectionContactsTest.java" />
-        <option value="$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionGroupsTest.java" />
-        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" />
+        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
+        <option value="$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2054" />
-    <option name="y" value="49" />
-    <option name="width" value="1118" />
-    <option name="height" value="920" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -886,7 +896,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -941,8 +950,9 @@
         </subPane>
       </pane>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -976,7 +986,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.DbConnectionContactsTest.checkDbConnectionContatcs">
+  <component name="RunManager" selected="TestNG.HbConnectionTest.checkHbConnectionTest">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1060,38 +1070,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="DbConnectionGroupTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.chisw.work.addressbook.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="work_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.chisw.work.addressbook.test" />
-      <option name="MAIN_CLASS_NAME" value="com.chisw.work.addressbook.test.DbConnectionGroupTest" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/addressbook" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
     <configuration name="DbConnectionGroupTest.checkDbConnection" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1142,6 +1120,38 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="work_test" />
       <envs />
+    </configuration>
+    <configuration name="HbConnectionTest.checkHbConnectionTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.chisw.work.addressbook.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="work_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.chisw.work.addressbook.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chisw.work.addressbook.test.HbConnectionTest" />
+      <option name="METHOD_NAME" value="checkHbConnectionTest" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/addressbook" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
     </configuration>
     <configuration name="TestContactDeletion.checkContactDeletion" type="TestNG" factoryName="TestNG" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -1337,19 +1347,19 @@
       <item index="1" class="java.lang.String" itemvalue="Application.GroupDataGenerator" />
       <item index="2" class="java.lang.String" itemvalue="TestNG.TestContactDeletion.checkContactDeletion" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.TestGroupDeletion.deleteAllGroups" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest.checkDbConnection" />
-      <item index="6" class="java.lang.String" itemvalue="TestNG.TestGroupCreation" />
-      <item index="7" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnection" />
-      <item index="8" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnectionContatcs" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest.checkDbConnection" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG.TestGroupCreation" />
+      <item index="6" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnection" />
+      <item index="7" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnectionContatcs" />
+      <item index="8" class="java.lang.String" itemvalue="TestNG.HbConnectionTest.checkHbConnectionTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnectionContatcs" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnection" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest.checkDbConnection" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.TestGroupCreation" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.HbConnectionTest.checkHbConnectionTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnectionContatcs" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.DbConnectionContactsTest.checkDbConnection" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.DbConnectionGroupTest.checkDbConnection" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.TestGroupCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -1501,32 +1511,32 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DbConnectionContactsTest_checkDbConnection - 2017.12.05 at 22h 52m 48s.xml">
-      <configuration name="DbConnectionContactsTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionContactsTest_checkDbConnection - 2017.12.05 at 22h 53m 12s.xml">
-      <configuration name="DbConnectionContactsTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionContactsTest_checkDbConnectionContatcs - 2017.12.05 at 22h 53m 44s.xml">
-      <configuration name="DbConnectionContactsTest.checkDbConnectionContatcs" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 16m 01s.xml">
-      <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 24m 27s.xml">
-      <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 24m 54s.xml">
-      <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 34m 50s.xml">
-      <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 38m 54s.xml">
       <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
     </history-entry>
     <history-entry file="DbConnectionTest_checkDbConnection - 2017.12.05 at 22h 40m 36s.xml">
       <configuration name="DbConnectionTest.checkDbConnection" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 20h 42m 04s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 20h 59m 17s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 20h 59m 48s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 21h 14m 17s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 21h 14m 36s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 21h 28m 42s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="HbConnectionTest_checkHbConnectionTest - 2017.12.06 at 21h 34m 42s.xml">
+      <configuration name="HbConnectionTest.checkHbConnectionTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="TestGroupCreation - 2017.12.05 at 22h 37m 57s.xml">
       <configuration name="TestGroupCreation" configurationId="TestNG" />
@@ -1542,22 +1552,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32241014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2410148" sideWeight="0.51354164" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20084566" sideWeight="0.48645833" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29492602" sideWeight="0.48645833" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22093023" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22466423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22447917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26007327" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1569,7 +1580,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32241014" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266385" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
@@ -1677,15 +1687,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" />
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
           <folding />
@@ -1702,8 +1703,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="255">
           <caret line="20" column="43" lean-forward="false" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java" />
+    <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/DbConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="104" lean-forward="false" selection-start-line="15" selection-start-column="102" selection-end-line="15" selection-end-column="121" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="60" lean-forward="true" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/HbConnectionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

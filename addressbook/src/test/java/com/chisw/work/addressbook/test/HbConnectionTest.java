@@ -1,11 +1,15 @@
 package com.chisw.work.addressbook.test;
 
+import com.chisw.work.addressbook.Data.GroupData;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class HbConnectionTest {
 
@@ -21,14 +25,20 @@ public class HbConnectionTest {
             sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
         }
         catch (Exception e) {
-            // The registry would be destroyed by the SessionFactory, but we had trouble building the SessionFactory
-            // so destroy it manually.
+            e.printStackTrace();
             StandardServiceRegistryBuilder.destroy( registry );
         }
     }
 
     @Test
     public void checkHbConnectionTest() {
-
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        List<GroupData> result = session.createQuery( "from GroupData" ).list();
+        for ( GroupData group : result ) {
+            System.out.println(group);
+        }
+        session.getTransaction().commit();
+        session.close();
     }
 }
