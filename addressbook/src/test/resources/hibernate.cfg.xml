@@ -32,6 +32,7 @@
 
         <!-- Names the annotated entity class -->
         <mapping class="com.chisw.work.addressbook.Data.GroupData"/>
+        <mapping class="com.chisw.work.addressbook.Data.ContactData"/>
 
     </session-factory>
 

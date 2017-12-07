@@ -63,14 +63,6 @@ public class GroupData {
     }
 
     @Override
-    public String toString() {
-        return "GroupData{" +
-                "groupName='" + groupName + '\'' +
-                ", groupId='" + groupId + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -78,14 +70,26 @@ public class GroupData {
         GroupData groupData = (GroupData) o;
 
         if (groupId != groupData.groupId) return false;
-        return groupName != null ? groupName.equals(groupData.groupName) : groupData.groupName == null;
+        if (groupName != null ? !groupName.equals(groupData.groupName) : groupData.groupName != null) return false;
+        if (groupLogo != null ? !groupLogo.equals(groupData.groupLogo) : groupData.groupLogo != null) return false;
+        return groupComment != null ? groupComment.equals(groupData.groupComment) : groupData.groupComment == null;
     }
 
     @Override
     public int hashCode() {
-        int result = groupName != null ? groupName.hashCode() : 0;
-        result = 31 * result + groupId;
+        int result = groupId;
+        result = 31 * result + (groupName != null ? groupName.hashCode() : 0);
+        result = 31 * result + (groupLogo != null ? groupLogo.hashCode() : 0);
+        result = 31 * result + (groupComment != null ? groupComment.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "GroupData{" +
+                "groupId=" + groupId +
+                ", groupName='" + groupName + '\'' +
+                '}';
     }
 
 }

@@ -4,7 +4,7 @@
     <test name="Groups" >
         <classes>
             <class name="com.chisw.work.addressbook.test.TestGroupCreation" />
-            <class name="com.chisw.work.addressbook.test.TestGroupEditing" />
+            <class name="com.chisw.work.addressbook.test.TestGroupModification" />
             <class name="com.chisw.work.addressbook.test.TestGroupDeletion" />
         </classes>
     </test>

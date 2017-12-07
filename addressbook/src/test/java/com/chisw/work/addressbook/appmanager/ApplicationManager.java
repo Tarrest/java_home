@@ -20,6 +20,7 @@ public class ApplicationManager {
     private ContactsHelper contactsHelper;
     private GroupsHelper groupsHelper;
     private String browser;
+    private DbHelper dbHelper;
 
     public ApplicationManager(String browser) {
         this.browser = browser;
@@ -31,7 +32,7 @@ public class ApplicationManager {
     public void init() throws IOException {
         String target = System.getProperty("target", "local");
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
-
+        dbHelper = new DbHelper();
         if (browser.equals(BrowserType.FIREFOX)) {
             System.setProperty("webdriver.gecko.driver", "c:\\Tools\\geckodriver.exe"); //папку с драйверами добавил в path
             driver = new FirefoxDriver();
@@ -62,5 +63,9 @@ public class ApplicationManager {
 
     public GroupsHelper groups() {
         return groupsHelper;
+    }
+
+    public DbHelper db() {
+        return dbHelper;
     }
 }

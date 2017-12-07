@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class TestContactEditing extends TestBase {
+public class TestContactModification extends TestBase {
 
     @BeforeMethod
     public void checkPreconditions() {
