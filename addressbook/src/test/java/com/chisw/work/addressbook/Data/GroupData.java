@@ -3,17 +3,32 @@ package com.chisw.work.addressbook.Data;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @XStreamAlias("group")
+@Entity
+@Table(name = "group_list")
 public class GroupData {
     @XStreamOmitField
+    @Id
+    @Column(name = "group_id")
     private int groupId = Integer.MAX_VALUE;
     @Expose
+    @Column(name = "group_name")
     private String groupName;
     @Expose
+    @Column(name = "group_header")
+    @Type(type = "text")
     private String groupLogo;
     @Expose
-    private String groupComment;
+    @Type(type = "text")
+    @Column(name = "group_footer")
+        private String groupComment;
 
     public int getId() {
         return groupId;
