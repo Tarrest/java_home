@@ -1,5 +1,7 @@
 package com.chisw.work.addressbook.test;
 
+import com.chisw.work.addressbook.Data.ContactData;
+import com.chisw.work.addressbook.Data.Contacts;
 import com.chisw.work.addressbook.Data.GroupData;
 import com.chisw.work.addressbook.Data.Groups;
 import com.chisw.work.addressbook.appmanager.ApplicationManager;
@@ -53,6 +55,17 @@ public class TestBase {
             assertThat(uiGroups, equalTo(dbGroups.stream()
                     .map((g) -> new GroupData().withId(g.getId()).withGroupName(g.getGroupName()))
                     .collect(Collectors.toSet())));
+        }
+    }
+
+    public void verifyContactsListInUi() {
+        if (Boolean.getBoolean("verifyUI")) {
+            Contacts dbContacts = app.db().contacts();
+            Contacts uiContacts = app.contacts().all();
+            assertThat(uiContacts, equalTo(dbContacts.stream()
+                    .map((c) -> new ContactData().withContactId(c.getContactId()).withLastName(c.getlName())
+                            .withFirstName(c.getfName()).withAddress(c.getAddress()))
+                            .collect(Collectors.toSet())));
         }
     }
 

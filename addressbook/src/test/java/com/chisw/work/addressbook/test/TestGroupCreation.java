@@ -21,22 +21,6 @@ import static org.hamcrest.MatcherAssert.*;
 public class TestGroupCreation extends TestBase {
 
     @DataProvider
-    public Iterator<Object[]> validGroupsFromXml() throws IOException {
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.xml")))) {
-            String xml = "";
-            String line = reader.readLine();
-            while (line != null) {
-                xml += line;
-                line = reader.readLine();
-            }
-            XStream xStream = new XStream();
-            xStream.processAnnotations(GroupData.class);
-            List<GroupData> groups = (List<GroupData>) xStream.fromXML(xml);
-            return groups.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
-        }
-    }
-
-    @DataProvider
     public Iterator<Object[]> validGroupsFromJson() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/groups.json")))) {
             String json = "";
@@ -56,11 +40,12 @@ public class TestGroupCreation extends TestBase {
     @Test(dataProvider = "validGroupsFromJson")
     public void checkGroupCreation(GroupData group) {
         app.goTo().groupPage();
-        Groups  before = app.groups().all();
+        Groups before = app.db().groups();
         app.groups().createNewGroup(group);
         assertThat(app.groups().count(),equalTo(before.size() + 1));
-        Groups after = app.groups().all();
+        Groups after = app.db().groups();
         assertThat(after, equalTo(
                 before.withAdded(group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+        verifyGroupsListInUi();
     }
 }

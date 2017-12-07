@@ -14,9 +14,7 @@ public class TestGroupModification extends TestBase {
     public void checkPreconditions() {
         if (app.db().groups().size() == 0) {
             app.goTo().groupPage();
-            if (!app.groups().isGroupsCreated()) {
-                app.groups().createGroupInBeforeMethod();
-            }
+            app.groups().createGroupInBeforeMethod();
         }
     }
 
