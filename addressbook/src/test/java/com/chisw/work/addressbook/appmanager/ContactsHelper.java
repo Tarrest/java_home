@@ -2,6 +2,8 @@ package com.chisw.work.addressbook.appmanager;
 
 import com.chisw.work.addressbook.Data.ContactData;
 import com.chisw.work.addressbook.Data.Contacts;
+import com.chisw.work.addressbook.Data.GroupData;
+import com.chisw.work.addressbook.Data.Groups;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -45,10 +47,13 @@ public class ContactsHelper extends BaseHelper {
         type(By.name("email"), contactData.getEmail());
         type(By.name("email2"), contactData.getEmail2());
         type(By.name("email3"), contactData.getEmail3());
-        attach(By.name("photo"), contactData.getPhoto());
+        //attach(By.name("photo"), contactData.getPhoto());
 
         if (creation) {
-            new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getIndexGroup());
+            if (contactData.getGroups().size() > 0) {
+                Assert.assertTrue(contactData.getGroups().size() == 1);
+                new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getGroups().iterator().next().getId());
+            }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
         }
@@ -76,7 +81,7 @@ public class ContactsHelper extends BaseHelper {
 
     public void createContactInBeforeMethod() {
         clickCreateNewContact();
-        fillContactForm(new ContactData().withFirstName("Pedro").withLastName("Kortez").withIndexGroup(1), true);
+        fillContactForm(new ContactData().withFirstName("Pedro").withLastName("Kortez"), true);
         submitContactForm();
         reloadPage();
     }

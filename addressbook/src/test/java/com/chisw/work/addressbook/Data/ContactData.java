@@ -63,15 +63,14 @@ public class ContactData {
     private String email3;
     @Transient
     private String allEmails;
-    @Transient
-    private File photo;
+    @Column(name = "photo")
+    @Type(type = "text")
+    private String photo;
+
     @ManyToMany
     @JoinTable(name = "address_in_groups",
             joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
     private Set<GroupData> groups = new HashSet<GroupData>();
-
-    public ContactData(Set<ContactData> contacts) {
-    }
 
     public String getfName() {
         return fName;
@@ -141,7 +140,7 @@ public class ContactData {
         return contactId;
     }
 
-    public File getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
@@ -234,7 +233,7 @@ public class ContactData {
         return this;
     }
 
-    public ContactData withPhoto(File photo) {
+    public ContactData withPhoto(String photo) {
         this.photo = photo;
         return this;
     }
@@ -268,4 +267,8 @@ public class ContactData {
                 '}';
     }
 
+    public ContactData inGroup(GroupData group) {
+        groups.add(group);
+        return this;
+    }
 }

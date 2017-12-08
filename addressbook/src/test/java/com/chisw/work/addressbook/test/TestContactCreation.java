@@ -2,6 +2,8 @@ package com.chisw.work.addressbook.test;
 
 import com.chisw.work.addressbook.Data.ContactData;
 import com.chisw.work.addressbook.Data.Contacts;
+import com.chisw.work.addressbook.Data.GroupData;
+import com.chisw.work.addressbook.Data.Groups;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
@@ -55,10 +57,11 @@ public class TestContactCreation extends TestBase {
 */
 
     @Test(dataProvider = "validContactsFromJson")
-    public void checkGroupCreation(ContactData contact) {
+    public void checkGroupCreation(ContactData contact, Groups group) {
+        Groups groups = app.db().groups();
         app.goTo().homePage();
         Contacts before = app.db().contacts();
-        app.contacts().createContact(contact);
+        app.contacts().createContact(contact.inGroup(group.iterator().next())); //переделать
         assertThat(app.contacts().count(),equalTo(before.size() + 1));
         Contacts after = app.db().contacts();
         assertThat(after, equalTo(
