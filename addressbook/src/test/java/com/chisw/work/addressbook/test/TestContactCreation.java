@@ -57,16 +57,16 @@ public class TestContactCreation extends TestBase {
 */
 
     @Test(dataProvider = "validContactsFromJson")
-    public void checkGroupCreation(ContactData contact, Groups group) {
+    public void checkGroupCreation(ContactData contact) {
         Groups groups = app.db().groups();
         app.goTo().homePage();
         Contacts before = app.db().contacts();
-        app.contacts().createContact(contact.inGroup(group.iterator().next())); //переделать
+        app.contacts().createContact(contact.inGroup(groups.iterator().next()));
         assertThat(app.contacts().count(),equalTo(before.size() + 1));
         Contacts after = app.db().contacts();
         assertThat(after, equalTo(
                 before.withAdded(contact.withContactId(after.stream().mapToInt((c) -> c.getContactId()).max().getAsInt()))));
         verifyContactsListInUi();
     }
-
+    //.inGroup(groups.iterator().next())
 }

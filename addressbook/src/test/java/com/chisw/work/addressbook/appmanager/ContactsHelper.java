@@ -52,7 +52,7 @@ public class ContactsHelper extends BaseHelper {
         if (creation) {
             if (contactData.getGroups().size() > 0) {
                 Assert.assertTrue(contactData.getGroups().size() == 1);
-                new Select(driver.findElement(By.name("new_group"))).selectByIndex(contactData.getGroups().iterator().next().getId());
+                new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getGroupName());
             }
         } else {
             Assert.assertFalse(isElementPresent(By.name("new_group")));
