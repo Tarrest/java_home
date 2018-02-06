@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="добавлен новый модуль для тестов для Mantis">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/java_home-work.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/java_home-work_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/java_home-work_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/mantisold.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/mantisold_main.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules/mantisold_test.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/addressbook/src/test/resources/remote.properties" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="c839a2e0-24e1-4c8a-b8f5-a2036e81dbe5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/addressbook/build.gradle" afterPath="$PROJECT_DIR$/addressbook/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestBase.class" afterPath="$PROJECT_DIR$/addressbook/out/test/classes/com/chisw/work/addressbook/test/TestBase.class" />
       <change beforePath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java" afterPath="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java" />
-      <change beforePath="$PROJECT_DIR$/addressbook/src/test/resources/local.properties" afterPath="$PROJECT_DIR$/addressbook/src/test/resources/local.properties" />
-      <change beforePath="$PROJECT_DIR$/mantisold/src/test/java/com/chisw/work/mantisold/test/TestBase.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/sandbox/build.gradle" afterPath="$PROJECT_DIR$/sandbox/build.gradle" />
     </list>
     <ignored path="$PROJECT_DIR$/addressbook/.gradle/" />
     <ignored path="$PROJECT_DIR$/addressbook/build/" />
@@ -140,22 +126,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+            <state relative-caret-position="-854">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
-                <element signature="e#2476#2477#0" expanded="true" />
-                <element signature="e#2505#2506#0" expanded="true" />
-                <element signature="e#2545#2546#0" expanded="true" />
-                <element signature="e#2582#2583#0" expanded="true" />
-                <element signature="e#2620#2621#0" expanded="true" />
-                <element signature="e#2659#2660#0" expanded="true" />
-                <element signature="e#2695#2696#0" expanded="true" />
-                <element signature="e#2730#2731#0" expanded="true" />
-                <element signature="e#2758#2759#0" expanded="true" />
-                <element signature="e#2789#2790#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2435#2436#0" expanded="true" />
+                <element signature="e#2464#2465#0" expanded="true" />
+                <element signature="e#2504#2505#0" expanded="true" />
+                <element signature="e#2541#2542#0" expanded="true" />
+                <element signature="e#2579#2580#0" expanded="true" />
+                <element signature="e#2618#2619#0" expanded="true" />
+                <element signature="e#2654#2655#0" expanded="true" />
+                <element signature="e#2689#2690#0" expanded="true" />
+                <element signature="e#2717#2718#0" expanded="true" />
+                <element signature="e#2748#2749#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -171,11 +158,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="408">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1633,17 +1620,17 @@
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/Data/Contacts.java" />
         <option value="$PROJECT_DIR$/sandbox/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook/src/test/resources/testng-contacts.xml" />
-        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestBase.java" />
-        <option value="$PROJECT_DIR$/addressbook/src/test/resources/local.properties" />
         <option value="$PROJECT_DIR$/addressbook/src/test/resources/remote.properties" />
+        <option value="$PROJECT_DIR$/addressbook/src/test/resources/local.properties" />
         <option value="$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/addressbook/build.gradle" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="156" />
+    <option name="y" value="262" />
     <option name="width" value="1270" />
     <option name="height" value="1023" />
   </component>
@@ -2401,7 +2388,35 @@
       <option name="project" value="LOCAL" />
       <updated>1517920878640</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="реализована возможность удаленного запуска браузера">
+      <created>1517930216972</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1517930216972</updated>
+    </task>
+    <task id="LOCAL-00031" summary="реализована возможность удаленного запуска браузера upd 2">
+      <created>1517930555226</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1517930555226</updated>
+    </task>
+    <task id="LOCAL-00032" summary="реализована возможность удаленного запуска браузера upd 3">
+      <created>1517930643910</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1517930643910</updated>
+    </task>
+    <task id="LOCAL-00033" summary="реализована возможность удаленного запуска браузера upd 3">
+      <created>1517931337669</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1517931337669</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -2446,7 +2461,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1696" height="1026" extended-state="6" />
+    <frame x="156" y="262" width="1270" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2457,12 +2472,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28524947" sideWeight="0.51544195" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28475335" sideWeight="0.48455805" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2857143" sideWeight="0.48455805" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22027972" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25824177" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3490099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.259901" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2543,9 +2558,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Украшательства" />
-    <MESSAGE value="Добавлена проверка имени на Details" />
-    <MESSAGE value="Прописан относительный путь для img и добавлен аватар к контакту" />
     <MESSAGE value="Создан генератор тестовых данных и реализована запись этих данных в файл" />
     <MESSAGE value="Выполнена параметризация тестового метода создания группы через @DataProvider" />
     <MESSAGE value="Выполнена загрузка тестовых данных из файла для создания группы" />
@@ -2568,7 +2580,10 @@
     <MESSAGE value="generated data is added" />
     <MESSAGE value="изменен браузер по дефолту" />
     <MESSAGE value="новый метод выбора браузера" />
-    <option name="LAST_COMMIT_MESSAGE" value="новый метод выбора браузера" />
+    <MESSAGE value="реализована возможность удаленного запуска браузера" />
+    <MESSAGE value="реализована возможность удаленного запуска браузера upd 2" />
+    <MESSAGE value="реализована возможность удаленного запуска браузера upd 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="реализована возможность удаленного запуска браузера upd 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2580,7 +2595,7 @@
           <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="86" />
+      <option name="time" value="87" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2848,14 +2863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/test/TestBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -2883,6 +2890,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-854">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2435#2436#0" expanded="true" />
+            <element signature="e#2464#2465#0" expanded="true" />
+            <element signature="e#2504#2505#0" expanded="true" />
+            <element signature="e#2541#2542#0" expanded="true" />
+            <element signature="e#2579#2580#0" expanded="true" />
+            <element signature="e#2618#2619#0" expanded="true" />
+            <element signature="e#2654#2655#0" expanded="true" />
+            <element signature="e#2689#2690#0" expanded="true" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2748#2749#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/addressbook/src/test/resources/remote.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -2891,22 +2918,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/addressbook/src/test/java/com/chisw/work/addressbook/appmanager/ApplicationManager.java">
+    <entry file="file://$PROJECT_DIR$/addressbook/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="50" column="47" lean-forward="false" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-          <folding>
-            <element signature="e#2476#2477#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2545#2546#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2620#2621#0" expanded="true" />
-            <element signature="e#2659#2660#0" expanded="true" />
-            <element signature="e#2695#2696#0" expanded="true" />
-            <element signature="e#2730#2731#0" expanded="true" />
-            <element signature="e#2758#2759#0" expanded="true" />
-            <element signature="e#2789#2790#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
