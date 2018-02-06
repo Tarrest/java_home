@@ -1,0 +1,35 @@
+[
+  {
+    "fName": "Firstname 0",
+    "lName": "Lastname 0",
+    "address": "Address 0",
+    "homePhone": "+3(236)10 12 120",
+    "mobPhone": "3 2361014120",
+    "workPhone": "3-236-10-13-120",
+    "email": "email0@mail.com",
+    "email2": "emailtwo0@mail.com",
+    "email3": "emailthree0@mail.com"
+  },
+  {
+    "fName": "Firstname 1",
+    "lName": "Lastname 1",
+    "address": "Address 1",
+    "homePhone": "+3(236)10 12 121",
+    "mobPhone": "3 2361014121",
+    "workPhone": "3-236-10-13-121",
+    "email": "email1@mail.com",
+    "email2": "emailtwo1@mail.com",
+    "email3": "emailthree1@mail.com"
+  },
+  {
+    "fName": "Firstname 2",
+    "lName": "Lastname 2",
+    "address": "Address 2",
+    "homePhone": "+3(236)10 12 122",
+    "mobPhone": "3 2361014122",
+    "workPhone": "3-236-10-13-122",
+    "email": "email2@mail.com",
+    "email2": "emailtwo2@mail.com",
+    "email3": "emailthree2@mail.com"
+  }
+]

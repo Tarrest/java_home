@@ -4,6 +4,8 @@
     <test name="Contacts">
         <classes>
             <class name="com.chisw.work.addressbook.test.TestContactDeletion"/>
+            <class name="com.chisw.work.addressbook.test.TestContactCreation"/>
+            <class name="com.chisw.work.addressbook.test.TestContactEmails"/>
         </classes>
     </test>
 </suite>
