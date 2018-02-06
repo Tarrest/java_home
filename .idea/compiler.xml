@@ -2,10 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="java_home-work_main" target="1.8" />
+      <module name="java_home-work_test" target="1.8" />
       <module name="mantis-test_main" target="1.8" />
       <module name="mantis-test_test" target="1.8" />
       <module name="mantis_main" target="1.8" />
       <module name="mantis_test" target="1.8" />
+      <module name="mantisold_main" target="1.8" />
+      <module name="mantisold_test" target="1.8" />
       <module name="work_main" target="1.8" />
       <module name="work_test" target="1.8" />
     </bytecodeTargetLevel>

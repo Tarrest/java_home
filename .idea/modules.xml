@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_home-work.iml" filepath="$PROJECT_DIR$/.idea/modules/java_home-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_home-work_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java_home-work_main.iml" group="work" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_home-work_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java_home-work_test.iml" group="work" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantis.iml" filepath="$PROJECT_DIR$/.idea/modules/mantis.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mantis_main.iml" group="mantis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mantis_test.iml" group="mantis" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantisold.iml" filepath="$PROJECT_DIR$/.idea/modules/mantisold.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantisold_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mantisold_main.iml" group="mantisold" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mantisold_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mantisold_test.iml" group="mantisold" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work.iml" filepath="$PROJECT_DIR$/.idea/modules/work.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work_main.iml" filepath="$PROJECT_DIR$/.idea/modules/work_main.iml" group="work" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/work_test.iml" filepath="$PROJECT_DIR$/.idea/modules/work_test.iml" group="work" />
