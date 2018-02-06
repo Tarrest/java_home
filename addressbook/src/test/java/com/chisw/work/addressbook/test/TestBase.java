@@ -23,9 +23,9 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestBase {
 
-/*    protected final static ApplicationManager app
-            = new ApplicationManager(System.getProperty("browser", BrowserType.FIREFOX));*/
-    protected final static ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
+    protected final static ApplicationManager app
+            = new ApplicationManager(System.getProperty("browser", BrowserType.FIREFOX));
+    //protected final static ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
     Logger logger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeSuite
