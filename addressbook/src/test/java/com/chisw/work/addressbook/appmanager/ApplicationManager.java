@@ -3,6 +3,7 @@ package com.chisw.work.addressbook.appmanager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -48,12 +49,29 @@ public class ApplicationManager {
                 driver = new ChromeDriver();
             }
         } else {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setBrowserName(browser);
-            capabilities.setPlatform(Platform.fromString(System.getProperty("platform", "win10")));
-            driver = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), capabilities);
+ //           DesiredCapabilities capabilities = new DesiredCapabilities();
+//            capabilities.setBrowserName(browser);
+//            capabilities.setPlatform(Platform.fromString(System.getProperty("platform", "win10")));
+
+            String[] chromeOptions = {"--headless", "--disable-gpu"};
+
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments(chromeOptions);
+            options.setCapability("platformName", System.getProperty("platform", "win10"));
+
+
+            driver = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), options);
+
+
+
         }
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
+
+
+
+
+
         driver.get(properties.getProperty("web.baseUrl"));
         contactsHelper = new ContactsHelper(driver);
         navigationHelper = new NavigationHelper(driver);
