@@ -9,16 +9,22 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    agent
+}
+
 dependencies {
-    testCompile group: 'org.testng', name: 'testng', version: '6.11'
+    compile group: 'org.testng', name: 'testng', version: '6.11'
     compile 'org.seleniumhq.selenium:selenium-java:3.8.1'
-    testCompile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
+    compile group: 'org.hamcrest', name: 'java-hamcrest', version: '2.0.0.0'
     compile 'com.beust:jcommander:1.72'
     compile 'com.thoughtworks.xstream:xstream-distribution:1.4.10'
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'ch.qos.logback:logback-classic:1.2.3'
     compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.11.Final'
+    agent "org.aspectj:aspectjweaver:1.8.0"
+    compile "ru.yandex.qatools.allure:allure-testng-adaptor:1.4.0.RC4"
 
 }
 
@@ -38,8 +44,12 @@ task testGroups(type: Test) {
     if (project.hasProperty('verifyUI')) {
         systemProperty 'verifyUI', "${verifyUI}"
     }
-
 }
+
+testGroups.doFirst {
+    jvmArgs "-javaagent:${configurations.agent.singleFile}"
+}
+
 
 task testContacts(type: Test) {
     useTestNG() {

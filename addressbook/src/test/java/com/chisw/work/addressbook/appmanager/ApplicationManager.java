@@ -1,6 +1,8 @@
 package com.chisw.work.addressbook.appmanager;
 
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -54,24 +56,12 @@ public class ApplicationManager {
 //            capabilities.setPlatform(Platform.fromString(System.getProperty("platform", "win10")));
 
             String[] chromeOptions = {"--headless", "--disable-gpu"};
-
             ChromeOptions options = new ChromeOptions();
             options.addArguments(chromeOptions);
             options.setCapability("platformName", System.getProperty("platform", "win10"));
-
-
             driver = new RemoteWebDriver(new URL(properties.getProperty("selenium.server")), options);
-
-
-
         }
         //driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
-
-
-
-
-
         driver.get(properties.getProperty("web.baseUrl"));
         contactsHelper = new ContactsHelper(driver);
         navigationHelper = new NavigationHelper(driver);
@@ -98,5 +88,9 @@ public class ApplicationManager {
 
     public DbHelper db() {
         return dbHelper;
+    }
+
+    public byte[] takeScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 }
